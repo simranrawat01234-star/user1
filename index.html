@@ -1,0 +1,2957 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DBMS Assignment</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #cbcdcf, #ffffff);
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(90deg, #1f2c3a, #2c3e50);
+      color: white;
+      text-align: center;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(76, 74, 74, 0.25);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 1.5px;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: auto;
+    }
+
+    .info {
+      background-color: #ffffff;
+      margin: 25px;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      border-left: 6px solid #3498db;
+    }
+
+    .info h1 {
+      font-size: 20px;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .info h2 {
+      font-size: 16px;
+      margin: 6px 0;
+      color: #555;
+    }
+
+    .content {
+      margin: 25px;
+      padding: 25px;
+      background-color: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    .content h2 {
+      text-align: center;
+      color: #2463a1;
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 12px;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+
+    h4 {
+      margin-top: 25px;
+      margin-bottom: 8px;
+      color: #1f2c3a;
+      font-size: 16px;
+      padding-left: 10px;
+      border-left: 4px solid #3498db;
+    }
+
+    p {
+      background: #3d5d87;
+      color: #fafafa;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-family: 'Courier New', monospace;
+      display: inline-block;
+      margin: 5px 0 10px 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+
+    img {
+      display: block;
+      margin: 10px 0 20px 10px;
+      border-radius: 20px;
+      border: 1px solid #f6f3f3;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    img:hover {
+      transform: scale(1.03);
+    }
+
+  </style>
+
+</head>
+<body>
+
+<header>
+  <h1>DATABASE MANAGEMENT SYSTEM PRACTICAL ASSIGNMENT</h1>
+</header>
+
+<div class="container">
+
+<div class="info">
+  <h1><strong>POST GRADUATE GOVERNMENT COLLEGE SECTOR-11 ,CHANDIGARH </strong></h1>
+  <h2><strong>NAME:</strong> SIMRAN</h2>
+  <h2><strong>Roll NO:</strong> 7013/24</h2>
+  <h2><strong>CLASS:</strong> BCA-2</h2>
+  <h2><strong>SUBJECT:</strong> DATABASE MANAGEMENT SYSTEM</h2>
+  <h2><strong>SUBMITTED TO:</strong> MR.CHETAN GUPTA</h2>
+</div>
+
+<div class="content">
+  <h2> ---SELECT QUERIES (1-10)--- </h2>
+
+  <h4>1. Display all columns of the EMP table.</h4>
+  <p>SELECT * FROM SCOTT.EMP;</p>
+  <img src="images/output1.png.png" alt="Query output" width="500">
+
+  <h4>2. Display EMPNO, ENAME, and SAL of all employees.</h4>
+  <p>SELECT EMPNO, ENAME, SAL FROM SCOTT.EMP;</p>
+  <img src="images/out2.png.png" alt="Query output" width="400">
+
+  <h4>3. Display all job titles from EMP.</h4>
+  <p>SELECT JOB FROM SCOTT.EMP;</p>
+  <img src="images/Screenshots/out3.png" alt="Query output" width="200">
+
+  <h4>4. Display employee names along with their department numbers.</h4>
+  <p>SELECT ENAME, DEPTNO FROM SCOTT.EMP;</p>
+  <img src="images/Screenshots/o4.png" alt="Query output" width="200">
+
+  <h4>5. Display all department details.</h4>
+  <p>SELECT * FROM SCOTT.DEPT;</p>
+  <img src="images/Screenshots/o5.png" alt="Query output" width="200">
+
+  <h4>6. Display distinct department numbers from EMP.</h4>
+  <p>SELECT DISTINCT DEPTNO FROM SCOTT.EMP;</p>
+  <img src="images/Screenshots/o6.png" alt="Query output" width="200">
+
+  <h4>7. Display employee name and annual salary (SAL × 12).</h4>
+  <p>SELECT ENAME, SAL * 12 AS ANNUAL_SALARY FROM SCOTT.EMP;</p>
+  <img src="images/o7.png" alt="Query output" width="200">
+
+  <h4>8. Display employee name, salary, and commission.</h4>
+  <p>SELECT ENAME, SAL, COMM AS COMMISSION FROM SCOTT.EMP;</p>
+  <img src="images/Screenshots/o8.png" alt="Query output" width="200">
+
+  <h4>9. Display job and salary of all employees.</h4>
+  <p>SELECT JOB, SAL FROM SCOTT.EMP;</p>
+  <img src="images/Screenshots/o9.png" alt="Query output" width="200">
+
+  <h4>10. Display employees along with their manager numbers.</h4>
+  <p>SELECT ENAME, MGR FROM SCOTT.EMP;</p>
+  <img src="images/Screenshots/o10.png" alt="Query output" width="200">
+
+  <h2> ---WHERE CLAUSE (1-60)--- </h2>
+
+  <h4>1. Display employees whose salary is greater than 3000.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE SAL > 3000;</p>
+  <img src="images/w1.png" alt = "Query output" width = "200">
+
+  <h4>2. Display employees working in department 10.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE DEPTNO = 10;</p>
+  <img src="images/w2.png" alt = "Query output" width = "200">
+
+  <h4>3. Display employees whose job is 'CLERK'.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE JOB = 'CLERK';</p>
+  <img src="images/w3.png" alt = "Query output" width = "200">
+
+  <h4>4. Display employees hired after 01-JAN-81.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE HIREDATE > '01-JAN-81';</p>
+  <img src="images/w4.png" alt = "Query output" width = "200">
+
+  <h4>5. Display employees whose salary is less than 1500.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE SAL < 1500;</p>
+  <img src="images/w6.png" alt = "Query output" width = "200">
+
+  <h4>6. Display employees whose salary is > 2000 and job is 'MANAGER'.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE SAL > 2000 AND JOB = 'MANAGER';</p>
+  <img src="images/w5.png" alt = "Query output" width = "200">
+
+  <h4>7. Display employees working in department 10 or 20.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE DEPTNO IN (10,20);</p>
+  <img src="images/w7.png" alt = "Query output" width = "200">
+
+  <h4>8. Display employees whose job is 'SALESMAN' and salary > 1500.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE JOB = 'SALESMAN' AND SAL > 1500;</p>
+  <img src="images/w8.png" alt = "Query output" width = "200">
+
+  <h4>9. Display employees who are either CLERK or ANALYST.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE JOB IN ('CLERK','ANALYST');</p>
+  <img src="images/w9.png" alt = "Query output" width = "200">
+
+  <h4>10. Display employees hired before 1982 and working in department 30.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE HIREDATE < '01-JAN-82' AND DEPTNO = 30;</p>
+  <img src="images/w10.png" alt = "Query output" width = "200">
+
+  <h4>11. Display employees working in departments 10, 20, or 30.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE DEPTNO IN (10,20,30);</p>
+  <img src="images/w11.png" alt = "Query output" width = "200">
+
+  <h4>12. Display employees whose job is not MANAGER or CLERK.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE JOB NOT IN ('MANAGER','CLERK');</p>
+  <img src="images/w12.png" alt = "Query output" width = "200">
+
+  <h4>13. Display employees whose department is not 10.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE DEPTNO <> 10;</p>
+  <img src="images/w13.png" alt = "Query output" width = "200">
+
+  <h4>14. Display employees whose salary is between 1000 and 3000.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE SAL BETWEEN 1000 AND 3000;</p>
+  <img src="images/w14.png" alt = "Query output" width = "200">
+
+  <h4>15. Display employees hired between 01-JAN-81 and 31-DEC-81.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE HIREDATE BETWEEN '01-JAN-81' AND '31-DEC-81';</p>
+  <img src="images/w15.png" alt = "Query output" width = "200">
+
+  <h4>16. Display employees whose name starts with 'A'.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE ENAME LIKE 'A%';</p>
+  <img src="images/w16.png" alt = "Query output" width = "200">
+
+  <h4>17. Display employees whose name ends with 'N'.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE ENAME LIKE '%N';</p>
+  <img src="images/w17.png" alt = "Query output" width = "200">
+
+  <h4>18. Display employees whose name contains 'LL'.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE ENAME LIKE '%LL%';</p>
+  <img src="images/w18.png" alt = "Query output" width = "200">
+
+  <h4>19. Display employees whose name has exactly 5 characters.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE ENAME LIKE '_____';</p>
+  <img src="images/w19.png" alt = "Query output" width = "200">
+
+  <h4>20. Display employees whose second character is 'A'.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE ENAME LIKE '_A%';</p>
+  <img src="images/w20.png" alt = "Query output" width = "200">
+
+  <h4>21. Display all employees ordered by salary in ascending order.</h4>
+  <p>SELECT * FROM SCOTT.EMP ORDER BY SAL ASC;</p>
+  <img src="images/w21.png" alt = "Query output" width = "200">
+
+  <h4>22. Display all employees ordered by salary in descending order.</h4>
+  <p>SELECT * FROM SCOTT.EMP ORDER BY SAL DESC;</p>
+  <img src="images/w22.png" alt = "Query output" width = "200">
+
+  <h4>23. Display employees ordered by hire date.</h4>
+  <p>SELECT * FROM SCOTT.EMP ORDER BY HIREDATE;</p>
+  <img src="images/w23.png" alt = "Query output" width = "200">
+
+  <h4>24. Display employees ordered by department number and salary.</h4>
+  <p>SELECT * FROM SCOTT.EMP ORDER BY DEPTNO, SAL;</p>
+  <img src="images/w24.png" alt = "Query output" width = "200">
+
+  <h4>25. Display employees ordered by job (ascending) and salary (descending).</h4>
+  <p>SELECT * FROM SCOTT.EMP ORDER BY JOB ASC, SAL DESC;</p>
+  <img src="images/w25.png" alt = "Query output" width = "200">
+
+  <h4>26. Display employee names ordered alphabetically.</h4>
+  <p>SELECT ENAME FROM SCOTT.EMP ORDER BY ENAME;</p>
+  <img src="images/w26.png" alt = "Query output" width = "200">
+
+  <h4>27. Display employees of department 30 ordered by salary.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE DEPTNO = 30 ORDER BY SAL;</p>
+  <img src="images/w27.png" alt = "Query output" width = "200">
+
+  <h4>28. Display employees ordered by annual salary.</h4>
+  <p>SELECT ENAME, SAL*12 FROM SCOTT.EMP ORDER BY SAL*12;</p>
+  <img src="images/w28.png" alt = "Query output" width = "200">
+
+  <h4>29. Display employees ordered by commission.</h4>
+  <p>SELECT * FROM SCOTT.EMP ORDER BY COMM;</p>
+  <img src="images/w29.png" alt = "Query output" width = "200">
+
+  <h4>30. Display employees ordered by job and name.</h4>
+  <p>SELECT * FROM SCOTT.EMP ORDER BY JOB, ENAME;</p>
+  <img src="images/w30.png" alt = "Query output" width = "200">
+
+  <h4>31. Display employee name as Employee_Name.</h4>
+  <p>SELECT ENAME AS Employee_Name FROM SCOTT.EMP;</p>
+  <img src="images/w31.png" alt = "Query output" width = "200">
+
+  <h4>32. Display salary as Monthly_Salary.</h4>
+  <p>SELECT SAL AS Monthly_Salary FROM SCOTT.EMP;</p>
+  <img src="images/w32.png" alt = "Query output" width = "200">
+
+  <h4>33. Display salary × 12 as Annual_Salary.</h4>
+  <p>SELECT SAL*12 AS Annual_Salary FROM SCOTT.EMP;</p>
+  <img src="images/w33.png" alt = "Query output" width = "200">
+
+  <h4>34. Display employee name and job with aliases.</h4>
+  <p>SELECT ENAME AS Name, JOB AS Role FROM SCOTT.EMP;</p>
+  <img src="images/w34.png" alt = "Query output" width = "200">
+
+  <h4>35. Display department number as Dept_No.</h4>
+  <p>SELECT DEPTNO AS Dept_No FROM SCOTT.EMP;</p>
+  <img src="images/w35.png" alt = "Query output" width = "200">
+
+  <h4>36. Display employee name and salary with meaningful aliases.</h4>
+  <p>SELECT ENAME AS Employee_Name, SAL AS Salary FROM SCOTT.EMP;</p>
+  <img src="images/w36.png" alt = "Query output" width = "200">
+
+  <h4>37. Display commission as Incentive.</h4>
+  <p>SELECT COMM AS Incentive FROM SCOTT.EMP;</p>
+  <img src="images/w37.png" alt = "Query output" width = "200">
+
+  <h4>38. Display hire date as Joining_Date.</h4>
+  <p>SELECT HIREDATE AS Joining_Date FROM SCOTT.EMP;</p>
+  <img src="images/w38.png" alt = "Query output" width = "200">
+
+  <h4>39. Display employee name and department number with aliases.</h4>
+  <p>SELECT ENAME AS Name, DEPTNO AS Department FROM SCOTT.EMP;</p>
+  <img src="images/w39.png" alt = "Query output" width = "200">
+
+  <h4>40. Display job and salary using aliases.</h4>
+  <p>SELECT JOB AS Job_Title, SAL AS Salary FROM SCOTT.EMP;</p>
+  <img src="images/w40.png" alt = "Query output" width = "200">
+
+  <h4>41. Display employees whose commission is NULL.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE COMM IS NULL;</p>
+  <img src="images/w41.png" alt = "Query output" width = "200">
+
+  <h4>42. Display employees who are getting commission.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE COMM IS NOT NULL;</p>
+  <img src="images/w42.png" alt = "Query output" width = "200">
+
+  <h4>43. Display employees who do not have a manager.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE MGR IS NULL;</p>
+  <img src="images/w43.png" alt = "Query output" width = "200">
+
+  <h4>44. Display employees whose manager is not NULL.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE MGR IS NOT NULL;</p>
+  <img src="images/w44.png" alt = "Query output" width = "200">
+
+  <h4>45. Display employees whose commission is NULL and salary > 2000.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE COMM IS NULL AND SAL > 2000;</p>
+  <img src="images/w45.png" alt = "Query output" width = "200">
+
+  <h4>46. Display employees whose commission is NULL or salary > 3000.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE COMM IS NULL OR SAL > 3000;</p>
+  <img src="images/w46.png" alt = "Query output" width = "200">
+
+  <h4>47. Display employees whose commission is NOT NULL and department is 30.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE COMM IS NOT NULL AND DEPTNO = 30;</p>
+  <img src="images/w47.png" alt = "Query output" width = "200">
+
+  <h4>48. Display employees who do not earn commission and work in department 20.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE COMM IS NULL AND DEPTNO = 20;</p>
+  <img src="images/w48.png" alt = "Query output" width = "200">
+
+  <h4>49. Display employees whose manager is NULL and salary > 4000.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE MGR IS NULL AND SAL > 4000;</p>
+  <img src="images/w49.png" alt = "Query output" width = "200">
+
+  <h4>50. Display employees whose commission is NULL but job is SALESMAN.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE COMM IS NULL AND JOB = 'SALESMAN';</p>
+  <img src="images/w50.png" alt = "Query output" width = "200">
+
+  <h4>51. Display employee name and annual salary, ordered by annual salary.</h4>
+  <p>SELECT ENAME, SAL*12 AS ANNUAL_SALARY FROM SCOTT.EMP ORDER BY ANNUAL_SALARY;</p>
+  <img src="images/w51.png" alt = "Query output" width = "200">
+
+  <h4>52. Display employees whose commission is NULL, ordered by salary descending.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE COMM IS NULL ORDER BY SAL DESC;</p>
+  <img src="images/w52.png" alt = "Query output" width = "200">
+
+  <h4>53. Display employee name as Name and salary as Pay for department 10.</h4>
+  <p>SELECT ENAME AS Name, SAL AS Pay FROM SCOTT.EMP WHERE DEPTNO = 10;</p>
+  <img src="images/w53.png" alt = "Query output" width = "200">
+
+  <h4>54. Display employees hired before 1982 with aliases, ordered by hire date.</h4>
+  <p>SELECT ENAME AS Name, HIREDATE AS Joining_Date FROM SCOTT.EMP WHERE HIREDATE < '01-JAN-82' ORDER BY HIREDATE;</p>
+  <img src="images/w54.png" alt = "Query output" width = "200">
+
+  <h4>55. Display employees whose name starts with 'S', ordered by salary.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE ENAME LIKE 'S%' ORDER BY SAL;</p>
+  <img src="images/w55.png" alt = "Query output" width = "200">
+
+  <h4>56. Display employee name and department, ordered by department and name.</h4>
+  <p>SELECT ENAME, DEPTNO FROM SCOTT.EMP ORDER BY DEPTNO, ENAME;</p>
+  <img src="images/w56.png" alt = "Query output" width = "200">
+
+  <h4>57. Display employees whose salary is between 1500 and 3000, ordered by salary.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE SAL BETWEEN 1500 AND 3000 ORDER BY SAL;</p>
+  <img src="images/w57.png" alt = "Query output" width = "200">
+
+  <h4>58. Display employees whose commission is NOT NULL, ordered by commission.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE COMM IS NOT NULL ORDER BY COMM;</p>
+  <img src="images/w58.png" alt = "Query output" width = "200">
+
+  <h4>59. Display employees of department 30 whose salary > 1500, ordered by salary.</h4>
+  <p>SELECT * FROM SCOTT.EMP WHERE DEPTNO = 30 AND SAL > 1500 ORDER BY SAL;</p>
+  <img src="images/w59.png" alt = "Query output" width = "200">
+
+  <h4>60. Display employee name, job, and salary with aliases, ordered by job.</h4>
+  <p>SELECT ENAME AS Name, JOB AS Job_Title, SAL AS Salary FROM SCOTT.EMP ORDER BY JOB;</p>
+  <img src="images/w60.png" alt = "Query output" width = "200">
+
+<H1>---LIKE OPERATOR(1-60)---</H1>
+
+<h4>1. Display employees whose name starts with A.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE 'A%';</p>
+<img src="images/l1.png" alt = "Query output" width = "200">
+
+<h4>2. Display employees whose name starts with S.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE 'S%';</p>
+<img src="images/l2.png" alt = "Query output" width = "200">
+
+<h4>3. Display employees whose name ends with N.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '%N';</p>
+<img src="images/l3.png" alt = "Query output" width = "200">
+
+<h4>4. Display employees whose name ends with R.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '%R';</p>
+<img src="images/l4.png" alt = "Query output" width = "200">
+
+<h4>5. Display employees whose name contains LL.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '%LL%';</p>
+<img src="images/l5.png" alt = "Query output" width = "200">
+
+<h4>6. Display employees whose name contains AR.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '%AR%';</p>
+<img src="images/l6.png" alt = "Query output" width = "200">
+
+<h4>7. Display employees whose job starts with M.</h4>
+<p>SELECT ENAME, JOB FROM SCOTT.EMP WHERE JOB LIKE 'M%';</p>
+<img src="images/l7.png" alt = "Query output" width = "200">
+
+<h4>8. Display employees whose job ends with AN.</h4>
+<p>SELECT ENAME, JOB FROM SCOTT.EMP WHERE JOB LIKE '%AN';</p>
+<img src="images/l8.png" alt = "Query output" width = "200">
+
+<h4>9. Display employees whose job contains CL.</h4>
+<p>SELECT ENAME, JOB FROM SCOTT.EMP WHERE JOB LIKE 'CL%';</p>
+<img src="images/l9.png" alt = "Query output" width = "200">
+
+<h4>10. Display departments whose location starts with N.</h4>
+<p>SELECT LOC FROM SCOTT.DEPT WHERE LOC LIKE 'N%';</p>
+<img src="images/l10.png" alt = "Query output" width = "200">
+
+<h4>11. Display employees whose name has exactly 4 characters.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '____';</p>
+<img src="images/l11.png" alt = "Query output" width = "200">
+
+<h4>12. Display employees whose name has exactly 5 characters.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '_____';</p>
+<img src="images/l12.png" alt = "Query output" width = "200">
+
+<h4>13. Display employees whose name has A as the second character.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '_A%';</p>
+<img src="images/l13.png" alt = "Query output" width = "200">
+
+<h4>14. Display employees whose name has L as the third character.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '__L%';</p>
+<img src="images/l14.png" alt = "Query output" width = "200">
+
+<h4>15. Display employees whose job has exactly 6 characters.</h4>
+<p>SELECT ENAME , JOB FROM SCOTT.EMP WHERE JOB LIKE '_____';</p>
+<img src="images/l15.png" alt = "Query output" width = "200">
+
+<h4>16. Display employees whose name starts with any letter but ends with N.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '%N';</p>
+<img src="images/l16.png" alt = "Query output" width = "200">
+
+<h4>17. Display employees whose job starts with any one character and ends with ER.</h4>
+<p>SELECT ENAME, JOB FROM SCOTT.EMP WHERE JOB LIKE '%ER';</p>
+<img src="images/l17.png" alt = "Query output" width = "200">
+
+<h4>18. Display employees whose name has A as the first and N as the last character.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE 'A%N';</p>
+<img src="images/l18.png" alt = "Query output" width = "200">
+
+<h4>19. Display employees whose name has exactly 2 characters before 'E'.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE  '___E%';</p>
+<img src="images/l19.png" alt = "Query output" width = "200">
+
+<h4>20. Display employees whose name has exactly 1 character after 'A'.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '_A%';</p>
+<img src="images/l20.png" alt = "Query output" width = "200">
+
+<h4>21. Display employees whose name starts with A and ends with N.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE 'A%N';</p>
+<img src="images/l21.png" alt = "Query output" width = "200">
+
+<h4>22. Display employees whose name contains E anywhere.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '%E%';</p>
+<img src="images/l22.png" alt = "Query output" width = "200">
+
+<h4>23. Display employees whose name does not contain A.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME  NOT LIKE 'A%';</p>
+<img src="images/l23.png" alt = "Query output" width = "200">
+
+<h4>24. Display employees whose job contains MAN.</h4>
+<p>SELECT JOB FROM SCOTT.EMP WHERE JOB LIKE 'MAN%';</p>
+<img src="images/l24.png" alt = "Query output" width = "200">
+
+<h4>25. Display employees whose job does not start with C.</h4>
+<p>SELECT JOB FROM SCOTT.EMP WHERE JOB NOT LIKE 'C%';</p>
+<img src="images/l25.png" alt = "Query output" width = "200">
+
+<h4>26. Display employees whose name contains two L consecutively.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '%LL%';</p>
+<img src="images/l26.png" alt = "Query output" width = "200">
+
+<h4>27. Display employees whose name starts with J and has S anywhere.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE 'J%S%';</p>
+<img src="images/l27.png" alt = "Query output" width = "200">
+
+<h4>28. Display employees whose job starts with S and ends with AN.</h4>
+<p>SELECT JOB FROM SCOTT.EMP WHERE JOB LIKE 'S%AN';</p>
+<img src="images/l28.png" alt = "Query output" width = "200">
+
+<h4>29. Display employees whose name contains A as the second last character.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '%A_';</p>
+<img src="images/l29.png" alt = "Query output" width = "200">
+
+<h4>30. Display employees whose name contains exactly one character between A and E.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '%A_E%';</p>
+<img src="images/l30.png" alt = "Query output" width = "200">
+
+<h4>31. Display employees whose name starts with S and salary > 2000.</h4>
+<p>SELECT ENAME, SAL FROM SCOTT.EMP WHERE ENAME LIKE 'S%' AND SAL > 2000;</p>
+<img src="images/l31.png" alt = "Query output" width = "200">
+
+<h4>32. Display employees whose job ends with MAN and department is 20.</h4>
+<p>SELECT ENAME, JOB, DEPTNO FROM SCOTT.EMP WHERE JOB LIKE '%MAN' AND DEPTNO = 20;</p>
+<img src="images/l32.png" alt = "Query output" width = "200">
+
+<h4>33. Display employees whose name contains A and commission is NULL.</h4>
+<p>SELECT ENAME , COMM FROM SCOTT.EMP WHERE ENAME LIKE '%A%' AND COMM IS NULL;</p>
+<img src="images/l33.png" alt = "Query output" width = "200">
+
+<h4>34. Display employees whose job starts with C and salary < 1500.</h4>
+<p>SELECT ENAME, JOB, SAL FROM SCOTT.EMP WHERE JOB LIKE 'C%' AND SAL < 1500;</p>
+<img src="images/l34.png" alt = "Query output" width = "200">
+
+<h4>35. Display employees whose name ends with S and hired after 1981.</h4>
+<p>SELECT ENAME, HIREDATE FROM SCOTT.EMP WHERE ENAME LIKE '%S' AND HIREDATE > '1981-12-31';</p>
+<img src="images/l35.png" alt = "Query output" width = "200">
+
+<h4>36. Display employees whose name starts with M and department is not 10.</h4>
+<p>SELECT ENAME, DEPTNO FROM SCOTT.EMP WHERE ENAME LIKE 'M%' AND DEPTNO <> 10;</p>
+<img src="images/l36.png" alt = "Query output" width = "200">
+
+<h4>37. Display employees whose job contains ER and salary between 2000 and 3000.</h4>
+<p>SELECT ENAME, JOB , SAL FROM SCOTT.EMP WHERE JOB LIKE '%ER%' AND SAL >= 2000 AND SAL <= 3000;</p>
+<img src="images/l37.png" alt = "Query output" width = "200">
+
+<h4>38. Display employees whose name starts with A or job starts with S.</h4>
+<p>SELECT ENAME, JOB FROM SCOTT.EMP WHERE ENAME LIKE 'A%' AND JOB LIKE 'S%';</p>
+<img src="images/l38.png" alt = "Query output" width = "200">
+
+<h4>39. Display employees whose name contains I and manager is NOT NULL.</h4>
+<p>SELECT ENAME, JOB FROM SCOTT.EMP WHERE ENAME LIKE '%I%' AND 'MANAGER' IS NOT NULL;</p>
+<img src="images/l39.png" alt = "Query output" width = "200">
+
+<h4>40. Display employees whose name ends with N and commission is NOT NULL.</h4>
+<p>SELECT ENAME , COMM FROM SCOTT.EMP WHERE ENAME LIKE '%N' AND 'COMM' IS NOT NULL;</p>
+<img src="images/l40.png" alt = "Query output" width = "200">
+
+<h4>41. Display employee name as Name whose name starts with S, ordered alphabetically.</h4>
+<p>SELECT ENAME AS NAME FROM SCOTT.EMP WHERE ENAME LIKE 'S%' ORDER BY ENAME;</p>
+<img src="images/l41.png" alt = "Query output" width = "200">
+
+<h4>42. Display employee name and salary as Pay whose name contains A, ordered by salary.</h4>
+<p>SELECT ENAME , SAL FROM SCOTT.EMP WHERE ENAME LIKE '%A%' ORDER BY SAL;</p>
+<img src="images/l42.png" alt = "Query output" width = "200">
+
+<h4>43. Display employees whose job starts with M, ordered by job and salary.</h4>
+<p>SELECT ENAME , JOB, SAL FROM SCOTT.EMP WHERE JOB LIKE 'M%' ORDER BY JOB , SAL;</p>
+<img src="images/l43.png" alt = "Query output" width = "200">
+
+<h4>44. Display employees whose name ends with E, ordered by hire date.</h4>
+<p>SELECT ENAME , HIREDATE FROM SCOTT.EMP WHERE ENAME LIKE '%E' ORDER BY HIREDATE;</p>
+<img src="images/l44.png" alt = "Query output" width = "200">
+
+
+<h4>45. Display employee name and annual salary for employees whose name starts with J.</h4>
+<p>SELECT ENAME, SAL * 12 FROM SCOTT.EMP WHERE ENAME LIKE 'J%';</p>
+<img src="images/l45.png" alt = "Query output" width = "200">
+
+
+<h4>46. Display employees whose name contains R, ordered by department number.</h4>
+<p>SELECT ENAME, DEPTNO FROM SCOTT.EMP WHERE ENAME LIKE '%R%' ORDER BY DEPTNO;</p>
+<img src="images/l46.png" alt = "Query output" width = "200">
+
+
+<h4>47. Display employee name as Employee whose job ends with AN.</h4>
+<p>SELECT ENAME AS EMPLOYEE_NAME , JOB FROM SCOTT.EMP WHERE JOB LIKE '%AN';</p>
+<img src="images/l47.png" alt = "Query output" width = "200">
+
+
+<h4>48. Display employees whose name starts with K, ordered by salary descending.</h4>
+<p>SELECT ENAME , SAL FROM SCOTT.EMP WHERE ENAME LIKE 'K%'ORDER BY SAL DESC;</p>
+<img src="images/l48.png" alt = "Query output" width = "200">
+
+
+<h4>49. Display employees whose name contains L, ordered by name and salary.</h4>
+<p>SELECT ENAME , SAL FROM SCOTT.EMP WHERE ENAME LIKE '%L%' ORDER BY ENAME , SAL;</p>
+<img src="images/l49.png" alt = "Query output" width = "200">
+
+
+<h4>50. Display employees whose job starts with C, ordered by job.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE JOB LIKE 'C%' ORDER BY JOB;</p>
+<img src="images/l50.png" alt = "Query output" width = "200">
+
+
+<h4>51. Display employees whose name has exactly 6 characters and ends with R.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '_____R';</p>
+<img src="images/l51.png" alt = "Query output" width = "200">
+
+
+<h4>52. Display employees whose name has A as the third character from start.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '__A%';</p>
+<img src="images/l52.png" alt = "Query output" width = "200">
+
+
+<h4>53. Display employees whose name has E as the second character from end.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '%E_';</p>
+<img src="images/l53.png" alt = "Query output" width = "200">
+
+
+<h4>54. Display employees whose name contains at least two characters before 'A'.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '__A%';</p>
+<img src="images/l54.png" alt = "Query output" width = "200">
+
+
+<h4>55. Display employees whose job contains exactly one 'A'.</h4>
+<p>SELECT ENAME, JOB FROM SCOTT.EMP WHERE ENAME LIKE '%A%';</p>
+<img src="images/l55.png" alt = "Query output" width = "200">
+
+
+<h4>56. Display employees whose name does not start with a vowel.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME NOT LIKE '%AEIOU%';</p>
+<img src="images/l56.png" alt = "Query output" width = "200">
+
+
+<h4>57. Display employees whose job does not contain ER.</h4>
+<p>SELECT ENAME , JOB FROM SCOTT.EMP WHERE JOB NOT LIKE '%ER%';</p>
+<img src="images/l57.png" alt = "Query output" width = "200">
+
+
+<h4>58. Display employees whose name starts and ends with the same character.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE SUBSTR(ENAME, 1, 1) = SUBSTR(ENAME, -1, 1);</p>
+<img src="images/l58.png" alt = "Query output" width = "200">
+
+
+<h4>59. Display employees whose name contains A and E in any order.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '%A%' AND ENAME LIKE '%E%';</p>
+<img src="images/l59.png" alt = "Query output" width = "200">
+
+
+<h4>60. Display employees whose name contains A but not as the first character.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE ENAME LIKE '%A%'  AND ENAME NOT LIKE 'A%';</p>
+<img src="images/l60.png" alt = "Query output" width = "200">
+
+
+<H1>---GROUP FUNCTION, GROUP BY, HAVING(1-70)---</H1>
+
+
+<h4>1. Display the total number of employees.</h4>
+<p>SELECT COUNT(EMPNO) from scott.emp;</p>
+<img src="images/g1.png" alt = "Query output" width = "200">
+
+<h4>2. Display the total salary of all employees.</h4>
+<p>SELECT SUM(SAL) FROM SCOTT.EMP;</p>
+<img src="images/g2.png" alt = "Query output" width = "200">
+
+<h4>3. Display the average salary of all employees.</h4>
+<p>SELECT AVG(SAL) FROM SCOTT.EMP;</p>
+<img src="images/g3.png" alt = "Query output" width = "200">
+
+<h4>4. Display the highest salary.</h4>
+<p>SELECT MAX(SAL) FROM SCOTT.EMP;</p>
+<img src="images/g4.png" alt = "Query output" width = "200">
+
+<h4>5. Display the lowest salary.</h4>
+<p>SELECT MIN(SAL) FROM SCOTT.EMP;</p>
+<img src="images/g5.png" alt = "Query output" width = "200">
+
+<h4>6. Display the total number of departments in EMP table.</h4>
+<p>SELECT COUNT(DEPTNO) FROM SCOTT.EMP;</p>
+<img src="images/g6.png" alt = "Query output" width = "200">
+
+<h4>7. Display the number of employees who are managers.</h4>
+<p>SELECT COUNT(EMPNO) FROM SCOTT.EMP WHERE JOB LIKE 'MANAGER';</p>
+<img src="images/g7.png" alt = "Query output" width = "200">
+
+<h4>8. Display the total commission paid to employees.</h4>
+<p>SELECT SUM(COMM) FROM SCOTT.EMP;</p>
+<img src="images/g8.png" alt = "Query output" width = "200">
+
+<h4>9. Display the average commission.</h4>
+<p>SELECT AVG(COMM) FROM SCOTT.EMP;</p>
+<img src="images/g9.png" alt = "Query output" width = "200">
+
+<h4>10. Display the number of employees who are getting commission.</h4>
+<p>SELECT COUNT(EMPNO) FROM SCOTT.EMP WHERE COMM IS NOT NULL;</p>
+<img src="images/g10.png" alt = "Query output" width = "200">
+
+<h4>11. Display department-wise total salary.</h4>
+<p>SELECT DEPTNO , SUM(SAL) AS TOTAL_SAL FROM SCOTT.EMP GROUP BY DEPTNO ORDER BY DEPTNO;</p>
+<img src="images/g11.png" alt = "Query output" width = "200">
+
+<h4>12. Display department-wise average salary.</h4>
+<p>SELECT DEPTNO, AVG(SAL) FROM SCOTT.EMP GROUP BY DEPTNO ORDER BY DEPTNO</p>
+<img src="images/g12.png" alt = "Query output" width = "200">
+
+<h4>13. Display department-wise number of employees.</h4>
+<p>SELECT DEPTNO ,COUNT(EMPNO) FROM SCOTT.EMP GROUP BY DEPTNO ORDER BY DEPTNO;</p>
+<img src="images/g13.png" alt = "Query output" width = "200">
+
+<h4>14. Display job-wise number of employees.</h4>
+<p>SELECT JOB, COUNT(EMPNO) FROM SCOTT.EMP GROUP BY JOB ORDER BY JOB;</p>
+<img src="images/g14.png" alt = "Query output" width = "200">
+
+<h4>15. Display job-wise total salary.</h4>
+<p>SELECT JOB , SUM(SAL) FROM SCOTT.EMP GROUP BY JOB ORDER BY JOB;</p>
+<img src="images/g15.png" alt = "Query output" width = "200">
+
+<h4>16. Display job-wise maximum salary.</h4>
+<p>SELECT JOB, MAX(SAL) FROM SCOTT.EMP GROUP BY JOB ORDER BY JOB;</p>
+<img src="images/g16.png" alt = "Query output" width = "200">
+
+<h4>17. Display job-wise minimum salary.</h4>
+<p>SELECT JOB, MIN(SAL) FROM SCOTT.EMP GROUP BY JOB ORDER BY JOB;</p>
+<img src="images/g17.png" alt = "Query output" width = "200">
+
+<h4>18. Display department-wise maximum salary.</h4>
+<p>SELECT DEPTNO, MAX(SAL) FROM SCOTT.EMP GROUP BY DEPTNO ORDER BY DEPTNO;</p>
+<img src="images/g18.png" alt = "Query output" width = "200">
+
+<h4>19. Display department-wise minimum salary.</h4>
+<p>SELECT DEPTNO, MIN(SAL) FROM SCOTT.EMP GROUP BY DEPTNO ORDER BY DEPTNO;</p>
+<img src="images/g19.png" alt = "Query output" width = "200">
+
+<h4>20. Display department-wise average commission.</h4>
+<p>SELECT DEPTNO, AVG(COMM) FROM SCOTT.EMP GROUP BY DEPTNO ORDER BY DEPTNO;</p>
+<img src="images/g20.png" alt = "Query output" width = "200">
+
+<h4>21. Display department-wise job-wise number of employees.</h4>
+<p>SELECT DEPTNO, JOB, COUNT(EMPNO) FROM SCOTT.EMP GROUP BY DEPTNO, JOB ORDER BY DEPTNO, JOB;</p>
+<img src="images/g21.png" alt = "Query output" width = "200">
+
+<h4>22. Display department-wise job-wise total salary.</h4>
+<p>SELECT DEPTNO, JOB, SUM(SAL) FROM SCOTT.EMP GROUP BY DEPTNO, JOB ORDER BY DEPTNO, JOB;</p>
+<img src="images/g22.png" alt = "Query output" width = "200">
+
+<h4>23. Display department-wise job-wise average salary.</h4>
+<p>SELECT DEPTNO, JOB, AVG(SAL) FROM SCOTT.EMP GROUP BY DEPTNO, JOB ORDER BY DEPTNO, JOB;</p>
+<img src="images/g23.png" alt = "Query output" width = "200">
+
+<h4>24. Display job-wise department-wise maximum salary.</h4>
+<p>SELECT DEPTNO, JOB, MAX(SAL) FROM SCOTT.EMP GROUP BY DEPTNO, JOB ORDER BY DEPTNO, JOB;</p>
+<img src="images/g24.png" alt = "Query output" width = "200">
+
+<h4>25. Display job-wise department-wise minimum salary.</h4>
+<p>SELECT DEPTNO, JOB, MIN(SAL) FROM SCOTT.EMP GROUP BY DEPTNO, JOB ORDER BY DEPTNO, JOB;</p>
+<img src="images/g25.png" alt = "Query output" width = "200">
+
+<h4>26. Display department and job having highest total salary.</h4>
+<p>SELECT DEPTNO, JOB, SUM(SAL) AS TOTAL_SAL FROM SCOTT.EMP GROUP BY DEPTNO,
+ JOB HAVING SUM(SAL) = ( SELECT MIN(SUM(SAL)) FROM SCOTT.EMP GROUP BY DEPTNO, JOB);</p>
+ <img src="images/g26.png" alt = "Query output" width = "200">
+
+<h4>27. Display department and job having lowest average salary.</h4>
+<p> SELECT DEPTNO, JOB, SUM(SAL) AS TOTAL_SAL FROM SCOTT.EMP GROUP BY DEPTNO,
+ JOB HAVING SUM(SAL) = ( SELECT MAX(SUM(SAL)) FROM SCOTT.EMP GROUP BY DEPTNO, JOB);</p>
+ <img src="images/g27.png" alt = "Query output" width = "200">
+
+<h4>28. Display department-wise job-wise total commission.</h4>
+<p>SELECT DEPTNO, JOB, SUM(COMM) FROM SCOTT.EMP GROUP BY DEPTNO, JOB ORDER BY DEPTNO, JOB;</p>
+<img src="images/g28.png" alt = "Query output" width = "200">
+
+<h4>29. Display department-wise job-wise employee count.</h4>
+<p>SELECT DEPTNO, JOB, COUNT(EMPNO) FROM SCOTT.EMP GROUP BY DEPTNO, JOB ORDER BY DEPTNO, JOB;</p>
+<img src="images/g29.png" alt = "Query output" width = "200">
+
+<h4>30. Display department and job having maximum number of employees.</h4>
+<p>SELECT department, job, COUNT(*) AS employee_count FROM scott.emp GROUP BY department, job ORDER BY employee_count DESC LIMIT 1;;</p>
+<img src="images/g30.png" alt = "Query output" width = "200">
+
+<h4>31. Display department-wise total salary for department numbers greater than 10.</h4>
+<p>select DEPTNO, SUM(SAL) AS TOTAL_SALARY FROM SCOTT.EMP WHERE DEPTNO > 10 GROUP BY DEPTNO;</p>
+<img src="images/g31.png" alt = "Query output" width = "200">
+
+<h4>32. Display job-wise employee count where salary > 2000.</h4>
+<p>SELECT JOB, COUNT(DEPTNO) FROM SCOTT.EMP WHERE SAL > 2000 GROUP BY JOB;</p>
+<img src="images/g32.png" alt = "Query output" width = "200">
+
+<h4>33. Display department-wise average salary for employees hired after 1981.</h4>
+<p>SELECT DEPTNO , AVG(SAL) FROM SCOTT.EMP WHERE HIREDATE > '01-JAN-1981' GROUP BY DEPTNO;</p>
+<img src="images/g33.png" alt = "Query output" width = "200">
+
+<h4>34. Display job-wise total salary for CLERK and MANAGER.</h4>
+<p>SELECT JOB, SUM(SAL) FROM SCOTT.EMP WHERE JOB = 'CLERK' OR JOB = 'MANAGER' GROUP BY JOB;</p>
+<img src="images/g34.png" alt = "Query output" width = "200">
+
+<h4>35. Display department-wise number of employees where commission is NOT NULL.</h4>
+<p>SELECT DEPTNO , COUNT(EMPNO) FROM SCOTT.EMP WHERE COMM IS NOT NULL GROUP BY DEPTNO;</p>
+<img src="images/g35.png" alt = "Query output" width = "200">
+
+<h4>36. Display job-wise average salary where department is 20.</h4>
+<p>SELECT JOB, AVG(SAL) FROM SCOTT.EMP WHERE DEPTNO = 20 GROUP BY JOB;</p>
+<img src="images/g36.png" alt = "Query output" width = "200">
+
+<h4>37. Display department-wise total salary excluding department 30.</h4>
+<p>SELECT DEPTNO, SUM(SAL) FROM SCOTT.EMP WHERE DEPTNO <> 30 GROUP BY DEPTNO;</p>
+<img src="images/g37.png" alt = "Query output" width = "200">
+
+<h4>38. Display job-wise max salary where salary > 1500.</h4>
+<p>SELECT JOB, MAX(SAL) FROM SCOTT.EMP WHERE SAL > 1500 GROUP BY JOB;</p>
+<img src="images/g38.png" alt = "Query output" width = "200">
+
+<h4>39. Display department-wise employee count where job is SALESMAN.</h4>
+<p>SELECT DEPTNO, COUNT(EMPNO) FROM SCOTT.EMP WHERE JOB = 'SALESMAN' GROUP BY DEPTNO;</p>
+<img src="images/g39.png" alt = "Query output" width = "200">
+
+<h4>40. Display job-wise total commission where commission is NOT NULL.</h4>
+<p>SELECT JOB , SUM(COMM) FROM SCOTT.EMP WHERE COMM IS NOT NULL GROUP BY JOB;</p>
+<img src="images/g40.png" alt = "Query output" width = "200">
+
+<h4>41. Display departments having more than 3 employees.</h4>
+<p>SELECT DEPTNO , COUNT(EMPNO) FROM SCOTT.EMP GROUP BY DEPTNO HAVING COUNT(EMPNO) > 3;</p>
+<img src="images/g41.png" alt = "Query output" width = "200">
+
+<h4>42. Display jobs having average salary greater than 2500.</h4>
+<p>SELECT JOB, AVG(SAL) FROM SCOTT.EMP GROUP BY JOB HAVING AVG(SAL) > 2500;</p>
+<img src="images/g42.png" alt = "Query output" width = "200">
+
+<h4>43. Display departments whose total salary is greater than 10000.</h4>
+<p>SELECT DEPTNO, SUM(SAL) FROM SCOTT.EMP GROUP BY DEPTNO HAVING SUM(SAL) > 10000;</p>
+<img src="images/g43.png" alt = "Query output" width = "200">
+
+<h4>44. Display jobs having more than 2 employees.</h4>
+<p>SELECT JOB, COUNT(EMPNO) FROM SCOTT.EMP GROUP BY JOB HAVING COUNT(EMPNO) > 2;</p>
+<img src="images/g44.png" alt = "Query output" width = "200">
+
+<h4>45. Display departments having maximum salary greater than 4000.</h4>
+<p>SELECT DEPTNO, MAX(SAL) FROM SCOTT.EMP GROUP BY DEPTNO HAVING MAX(SAL) > 4000;</p>
+<img src="images/g45.png" alt = "Query output" width = "200">
+
+<h4>46. Display jobs whose minimum salary is less than 1000.</h4>
+<p>SELECT JOB, MIN(SAL) FROM SCOTT.EMP GROUP BY JOB HAVING MIN(SAL) < 1000 ;</p>
+<img src="images/g46.png" alt = "Query output" width = "200">
+
+<h4>47. Display department-wise total salary where employee count > 4.</h4>
+<p>SELECT DEPTNO, SUM(SAL) AS TOTAL_SALARY FROM SCOTT.EMP GROUP BY DEPTNO HAVING COUNT(EMPNO) > 4;</p>
+<img src="images/g47.png" alt = "Query output" width = "200">
+
+<h4>48. Display job-wise average salary where total salary > 5000.</h4>
+<p>SELECT JOB ,AVG(SAL) FROM SCOTT.EMP GROUP BY JOB HAVING SUM(SAL) > 5000;</p>
+<img src="images/g48.png" alt = "Query output" width = "200">
+
+<h4>49. Display departments having employees with commission.</h4>
+<p>SELECT DEPTNO FROM SCOTT.EMP WHERE COMM IS NOT NULL GROUP BY DEPTNO; </p>
+<img src="images/g49.png" alt = "Query output" width = "200">
+
+<h4>50. Display jobs having more than one manager.</h4>
+<p>SELECT JOB, COUNT(EMPNO) FROM SCOTT.EMP WHERE JOB = 'MANAGER' GROUP BY JOB HAVING COUNT(EMPNO) > 1; </p>
+<img src="images/g50.png" alt = "Query output" width = "200">
+
+<h4>51. Display department-wise count of employees getting commission.</h4>
+<p>SELECT DEPTNO , COUNT(EMPNO) FROM SCOTT.EMP WHERE COMM IS NOT NULL OR COMM <> 0 GROUP BY DEPTNO;</p>
+<img src="images/g51.png" alt = "Query output" width = "200">
+
+<h4>52. Display job-wise total commission.</h4>
+<p>SELECT JOB, SUM(COMM) AS TOTAL_COMM FROM SCOTT.EMP GROUP BY JOB;</p>
+<img src="images/g52.png" alt = "Query output" width = "200">
+
+<h4>53. Display department-wise average commission excluding NULLs.</h4>
+<p>SELECT DEPTNO, AVG(COMM) FROM SCOTT.EMP WHERE COMM IS NOT NULL GROUP BY DEPTNO;</p>
+<img src="images/g53.png" alt = "Query output" width = "200">
+
+<h4>54. Display total commission paid (ignore NULLs).</h4>
+<p>SELECT SUM(COMM) FROM SCOTT.EMP WHERE COMM IS NOT NULL; </p>
+<img src="images/g54.png" alt = "Query output" width = "200">
+
+<h4>55. Display number of employees without commission.</h4>
+<p>SELECT COUNT(EMPNO) FROM SCOTT.EMP WHERE COMM IS NULL OR COMM = 0;</p>
+<img src="images/g55.png" alt = "Query output" width = "200">
+
+<h4>56. Display department-wise count of employees where manager is NULL.</h4>
+<p>SELECT DEPTNO,COUNT(*) FROM SCOTT.EMP WHERE MGR IS NULL GROUP BY DEPTNO;</p>
+<img src="images/g56.png" alt = "Query output" width = "200">
+
+<h4>57. Display job-wise average commission.</h4>
+<p>SELECT JOB, AVG(COMM) FROM SCOTT.EMP GROUP BY JOB;</p>
+<img src="images/g57.png" alt = "Query output" width = "200">
+
+<h4>58. Display departments where all employees get commission.</h4>
+<p>SELECT DEPTNO, COUNT(EMPNO) FROM SCOTT.EMP WHERE COMM IS NOT NULL OR COMM <> 0 GROUP BY DEPTNO;</p>
+<img src="images/g59.png" alt = "Query output" width = "200">
+
+<h4>59. Display departments where no employee gets commission.</h4>
+<p>SELECT DEPTNO FROM SCOTT.EMP GROUP BY DEPTNO HAVING COUNT(COMM) = 0;</p>
+<img src="images/g60.png" alt = "Query output" width = "200">
+
+<h4>60. Display job-wise count of employees not getting commission.</h4>
+<p>SELECT JOB, COUNT(EMPNO) FROM SCOTT.EMP WHERE COMM IS NULL OR COMM = 0 GROUP BY JOB;</p>
+<img src="images/g61.png" alt = "Query output" width = "200">
+
+<h4>61. Display department number and total salary where average salary is greater than overall average salary.</h4>
+<p>SELECT DEPTNO, SUM(SAL) AS TOTAL_SALARY FROM SCOTT.EMP GROUP BY DEPTNO HAVING AVG(SAL) > (SELECT AVG(SAL) FROM SCOTT.EMP);</p>
+<img src="images/g61.png" alt = "Query output" width = "200">
+
+<h4>62. Display job having highest average salary.</h4>
+<p>SELECT JOB, AVG(SAL) FROM SCOTT.EMP GROUP BY JOB HAVING AVG(SAL) = (SELECT MAX(AVG(SAL)) FROM SCOTT.EMP GROUP BY JOB);</p>
+<img src="images/g62.png" alt = "Query output" width = "200">
+
+<h4>63. Display department having minimum total salary.</h4>
+<p>SELECT JOB, SUM(SAL) FROM SCOTT.EMP GROUP BY JOB HAVING SUM(SAL) = (SELECT MIN(SUM(SAL)) FROM SCOTT.EMP GROUP BY JOB);</p>
+<img src="images/g63.png" alt = "Query output" width = "200">
+
+<h4>64. Display jobs where max salary is equal to department 20 max salary.</h4>
+<p>SELECT JOB FROM SCOTT.EMP GROUP BY JOB HAVING MAX(SAL) = (SELECT MAX(SAL) FROM SCOTT.EMP WHERE DEPTNO = 20);</p>
+<img src="images/g64.png" alt = "Query output" width = "200">
+
+<h4>65. Display departments having same number of employees.</h4>
+<p>SELECT deptno FROM scott.emp GROUP BY deptno HAVING COUNT(*) IN (SELECT COUNT(*)FROM scott.emp GROUP BY deptno HAVING COUNT(*) > 1);</p>
+<img src="images/g65.png" alt = "Query output" width = "200">
+
+<h4>66. Display jobs whose total salary is more than salary of all CLERKs combined.</h4>
+<p>SELECT job FROM scott.emp GROUP BY job HAVING SUM(sal) > (SELECT SUM(sal)FROM scott.emp WHERE job = 'CLERK');</p>
+<img src="images/g66.png" alt = "Query output" width = "200">
+
+<h4>67. Display department having highest number of employees.</h4>
+<p>SELECT deptno FROM scott.emp GROUP BY deptno HAVING COUNT(*) = ( SELECT MAX(COUNT(*)) FROM scott.emp GROUP BY deptno);</p>
+<img src="images/g67.png" alt = "Query output" width = "200">
+
+<h4>68. Display jobs having average salary greater than department-wise average salary.</h4>
+<p>SELECT job FROM scott.emp GROUP BY job HAVING AVG(sal) > (SELECT AVG(sal) FROM scott.emp GROUP BY deptno);</p>
+<img src="images/g68.png" alt = "Query output" width = "200">
+
+<h4>69. Display department where sum of salaries is maximum.</h4>
+<p>SELECT deptno FROM scott.emp GROUP BY deptno HAVING SUM(sal) = (SELECT MAX(SUM(sal))FROM scott.emp GROUP BY deptno);</p>
+<img src="images/g69.png" alt = "Query output" width = "200">
+
+<h4>70. Display job having minimum average salary.</h4>
+<p>SELECT job FROM scott.emp GROUP BY job HAVING AVG(sal) = (SELECT MIN(AVG(sal))FROM scott.emp GROUP BY job);</p>
+<img src="images/g70.png" alt = "Query output" width = "200">
+
+
+<H1>---SUBQUERIES(1-70)---</H1>
+
+
+<h4>1. Display employees whose salary is greater than JONES.</h4>
+<p>SELECT ENAME, SAL FROM SCOTT.EMP WHERE SAL > (SELECT SAL FROM SCOTT.EMP WHERE ENAME = 'JONES');</p>
+<img src="images/s1.png" alt = "Query output" width = "200">
+
+<h4>2. Display employees earning the same salary as SCOTT.</h4>
+<p>SELECT ENAME , SAL FROM SCOTT.EMP WHERE SAL = (SELECT SAL FROM SCOTT.EMP WHERE ENAME = 'SCOTT');</p>
+<img src="images/s2.png" alt = "Query output" width = "200">
+
+<h4>3. Display employees hired after ALLEN.</h4>
+<p>SELECT ENAME , HIREDATE FROM SCOTT.EMP WHERE HIREDATE >= (SELECT HIREDATE FROM SCOTT.EMP WHERE ENAME = 'ALLEN');</p>
+<img src="images/s3.png" alt = "Query output" width = "200">
+
+<h4>4. Display employees working in the same department as BLAKE.</h4>
+<p>SELECT ENAME, DEPTNO FROM SCOTT.EMP WHERE DEPTNO = (SELECT DEPTNO FROM SCOTT.EMP WHERE ENAME = 'BLAKE');</p>
+<img src="images/s4.png" alt = "Query output" width = "200">
+
+<h4>5. Display employees having the same job as MILLER.</h4>
+<p>SELECT ENAME, JOB FROM SCOTT.EMP WHERE JOB = (SELECT JOB FROM SCOTT.EMP WHERE ENAME = 'MILLER');</p>
+<img src="images/s5.png" alt = "Query output" width = "200">
+
+<h4>6. Display employees earning less than the average salary.</h4>
+<p>SELECT ENAME, SAL FROM SCOTT.EMP WHERE SAL < (SELECT AVG(SAL) FROM SCOTT.EMP );</p>
+<img src="images/s6.png" alt = "Query output" width = "200">
+
+<h4>7. Display employees earning more than the maximum salary of CLERKs.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE SAL > (SELECT MAX(SAL)FROM SCOTT.EMP WHERE JOB = 'CLERK');</p>
+<img src="images/s7.png" alt = "Query output" width = "200">
+
+<h4>8. Display employee(s) with the minimum salary.</h4>
+<p>SELECT ENAME, SAL FROM SCOTT.EMP WHERE SAL <= (SELECT MIN(SAL) FROM SCOTT.EMP );</p>
+<img src="images/s8.png" alt = "Query output" width = "200">
+
+<h4>9. Display employee(s) with the maximum salary.</h4>
+<p>SELECT ENAME , SAL FROM SCOTT.EMP WHERE SAL >= (SELECT MAX(SAL) FROM SCOTT.EMP );</p>
+<img src="images/s9.png" alt = "Query output" width = "200">
+
+<h4>10. Display employees working in the department named ACCOUNTING.</h4>
+<p>SELECT * FROM SCOTT.EMP WHERE DEPTNO = (SELECT DEPTNO FROM SCOTT.DEPT WHERE DNAME = 'ACCOUNTING');</p>
+<img src="images/s10.png" alt = "Query output" width = "200">
+
+<h4>11. Display employees working in departments located in NEW YORK.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE DEPTNO = (SELECT DEPTNO FROM SCOTT.DEPT WHERE LOC = 'NEW YORK');</p>
+<img src="images/s11.png" alt = "Query output" width = "200">
+
+<h4>12. Display employees whose salary matches any salary in department 30.</h4>
+<p>SELECT ENAME ,DEPTNO, SAL FROM SCOTT.EMP WHERE SAL = ANY(SELECT SAL FROM SCOTT.EMP WHERE DEPTNO = 30);</p>
+<img src="images/s12.png" alt = "Query output" width = "200">
+
+<h4>13. Display employees earning more than all CLERKs.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE SAL > (SELECT SUM(SAL) FROM SCOTT.EMP WHERE JOB = 'CLERK');</p>
+<img src="images/s13.png" alt = "Query output" width = "200">
+
+<h4>14. Display employees earning less than any MANAGER.</h4>
+<p>SELECT ENAME, SAL FROM SCOTT.EMP WHERE SAL <= (SELECT MIN(SAL) FROM SCOTT.EMP WHERE JOB = 'MANAGER');</p>
+<img src="images/s14.png" alt = "Query output" width = "200">
+
+<h4>15. Display employees whose job appears in department 20.</h4>
+<p>SELECT ENAME,DEPTNO, JOB FROM SCOTT.EMP WHERE DEPTNO = 20;</p>
+<img src="images/s15.png" alt = "Query output" width = "200">
+
+<h4>16. Display employees whose department has at least one SALESMAN.</h4>
+<p>SELECT ENAME, JOB, DEPTNO FROM SCOTT.EMP WHERE DEPTNO IN(SELECT DEPTNO FROM SCOTT.EMP WHERE JOB = 'SALESMAN');</p>
+<img src="images/s16.png" alt = "Query output" width = "200">
+
+<h4>17. Display employees earning the same salary as any CLERK.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE SAL = ANY (SELECT SAL FROM SCOTT.EMP WHERE JOB = 'CLERK');</p>
+<img src="images/s17.png" alt = "Query output" width = "200">
+
+<h4>18. Display employees who are not working in departments of SALESMAN.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE DEPTNO NOT IN ( SELECT DEPTNO FROM SCOTT.EMP WHERE JOB = 'SALESMAN');</p>
+<img src="images/s18.png" alt = "Query output" width = "200">
+
+<h4>19. Display employees earning more than all employees in department 10.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE SAL > ALL (SELECT SAL FROM SCOTT.EMP WHERE DEPTNO = 10);</p>
+<img src="images/s19.png" alt = "Query output" width = "200">
+
+<h4>20. Display employees whose department number is among departments with more than 3 employees.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE DEPTNO IN (SELECT DEPTNO FROM SCOTT.EMP GROUP BY DEPTNO HAVING COUNT(*) > 3);</p>
+<img src="images/s20.png" alt = "Query output" width = "200">
+
+<h4>21. Display employees earning more than the department average salary.</h4>
+<p>SELECT ENAME, DEPTNO FROM SCOTT.EMP WHERE SAL > (SELECT AVG(SAL) FROM SCOTT.EMP );</p>
+<img src="images/s21.png" alt = "Query output" width = "200">
+
+<h4>22. Display employees earning the highest salary in each department.</h4>
+<p>SELECT * FROM SCOTT.EMP WHERE SAL >= (SELECT MAX(SAL) FROM SCOTT.EMP WHERE DEPTNO = EMP.DEPTNO );</p>
+<img src="images/s22.png" alt = "Query output" width = "200">
+
+<h4>23. Display employees earning the lowest salary in each job.</h4>
+<p>SELECT ENAME, SAL FROM SCOTT.EMP WHERE SAL <= (SELECT MIN(SAL) FROM SCOTT.EMP WHERE JOB = EMP.JOB);</p>
+<img src="images/s23.png" alt = "Query output" width = "200">
+
+<h4>24. Display departments having total salary greater than department 20.</h4>
+<p>SELECT DEPTNO FROM SCOTT.EMP GROUP BY DEPTNO HAVING SUM (SAL) > (SELECT SUM(SAL) FROM SCOTT.EMP WHERE DEPTNO = 20);</p>
+<img src="images/s24.png" alt = "Query output" width = "200">
+
+<h4>25. Display employees whose salary equals the maximum salary of their job.</h4>
+<p>SELECT * FROM SCOTT.EMP WHERE SAL >= (SELECT MAX(SAL) FROM SCOTT.EMP WHERE JOB = EMP.JOB);</p>
+<img src="images/s25.png" alt = "Query output" width = "200">
+
+<h4>26. Display employees earning more than the overall average salary.</h4>
+<p>SELECT ENAME, SAL FROM SCOTT.EMP WHERE SAL >= (SELECT AVG(SAL) FROM SCOTT.EMP );</p>
+<img src="images/s26.png" alt = "Query output" width = "200">
+
+<h4>27. Display department(s) having the maximum number of employees.</h4>
+<p>SELECT ENAME, DEPTNO FROM SCOTT.EMP WHERE EMPNO >= (SELECT MAX(EMPNO) FROM SCOTT.EMP);</p>
+<img src="images/s27.png" alt = "Query output" width = "200">
+
+<h4>28. Display jobs having minimum average salary.</h4>
+<p>SELECT ENAME , JOB FROM SCOTT.EMP WHERE SAL < (SELECT AVG(SAL) FROM SCOTT.EMP );</p>
+<img src="images/s28.png" alt = "Query output" width = "200">
+
+<h4>29. Display employees earning more than the average salary of CLERKs.</h4>
+<p>SELECT ENAME, SAL FROM SCOTT.EMP WHERE SAL > (SELECT AVG(SAL) FROM SCOTT.EMP WHERE JOB = 'CLERK');</p>
+<img src="images/s29.png" alt = "Query output" width = "200">
+
+<h4>30. Display department(s) where average salary is highest.</h4>
+<p>SELECT DEPTNO FROM SCOTT.EMP GROUP BY DEPTNO HAVING AVG(SAL) = (SELECT MAX(AVG(SAL)) FROM SCOTT.EMP GROUP BY DEPTNO);</p>
+<img src="images/s30.png" alt = "Query output" width = "200">
+
+<h4>31. Display employees earning more than the average salary of their own department.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP  WHERE SAL >= (SELECT AVG(SAL) FROM SCOTT.EMP WHERE DEPTNO = DEPTNO);</p>
+<img src="images/s31.png" alt = "Query output" width = "200">
+
+<h4>32. Display employees earning the maximum salary in their department.</h4>
+<p>SELECT ENAME, SAL, DEPTNO FROM SCOTT.EMP WHERE SAL >= (SELECT MAX(SAL) FROM SCOTT.EMP WHERE DEPTNO = DEPTNO);</p>
+<img src="images/s32.png" alt = "Query output" width = "200">
+
+<h4>33. Display employees earning the minimum salary in their department.</h4>
+<p>SELECT ENAME, SAL, DEPTNO FROM SCOTT.EMP WHERE SAL <= (SELECT MIN(SAL) FROM SCOTT.EMP WHERE DEPTNO = DEPTNO);</p>
+<img src="images/s33.png" alt = "Query output" width = "200">
+
+<h4>34. Display employees whose salary is greater than the average salary of their job.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE SAL >= (SELECT AVG(SAL) FROM SCOTT.EMP WHERE JOB = JOB);</p>
+<img src="images/s34.png" alt = "Query output" width = "200">
+
+<h4>35. Display employees who are the only employee in their department.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE 1 = (SELECT COUNT(*)FROM SCOTT.EMP WHERE DEPTNO = DEPTNO);</p>
+<img src="images/s35.png" alt = "Query output" width = "200">
+
+<h4>36. Display departments having employees earning more than 5000.</h4>
+<p>SELECT DEPTNO FROM SCOTT.EMP WHERE DEPTNO IN (SELECT DEPTNO FROM SCOTT.EMP WHERE SAL > 5000);</p>
+<img src="images/s36.png" alt = "Query output" width = "200">
+
+<h4>37. Display employees whose department has more than 3 employees.</h4>
+<p>SELECT ENAME, DEPTNO, EMPNO FROM SCOTT.EMP WHERE DEPTNO > (SELECT COUNT(EMPNO) FROM SCOTT.EMP WHERE EMPNO > 3);</p>
+<img src="images/s37.png" alt = "Query output" width = "200">
+
+<h4>38. Display employees whose job has more than 2 employees.</h4>
+<p>SELECT ENAME, JOB FROM SCOTT.EMP WHERE JOB IN ( SELECT JOB FROM SCOTT.EMP GROUP BY JOB HAVING COUNT(*) > 2);</p>
+<img src="images/s38.png" alt = "Query output" width = "200">
+
+<h4>39. Display employees working in departments where no one gets commission.</h4>
+<p>SELECT ENAME, DEPTNO FROM SCOTT.EMP WHERE DEPTNO IN ( SELECT DEPTNO FROM SCOTT.EMP GROUP BY DEPTNO HAVING COUNT(COMM) = 0);</p>
+<img src="images/s39.png" alt = "Query output" width = "200">
+
+<h4>40. Display employees whose department has at least one manager.</h4>
+<p>SELECT ENAME FROM SCOTT.EMP WHERE DEPTNO IN(SELECT DEPTNO FROM SCOTT.EMP WHERE DEPTNO HAVING JOB = 'MANAGER');</p>
+<img src="images/s40.png" alt = "Query output" width = "200">
+
+<h4>41. Display departments that have employees.</h4>
+<p>SELECT DNAME, DEPTNO FROM SCOTT.DEPT WHERE DEPTNO IN (SELECT DEPTNO FROM SCOTT.EMP);</p>
+<img src="images/s41.png" alt = "Query output" width = "200">
+
+<h4>42. Display departments that have no employees.</h4>
+<p>SELECT DNAME, DEPTNO FROM SCOTT.DEPT WHERE DEPTNO NOT IN (SELECT DEPTNO FROM SCOTT.EMP);</p>
+<img src="images/s42.png" alt = "Query output" width = "200">
+
+<h4>43. Display employees who are managers (have subordinates).</h4>
+<p>SELECT EMPNO, ENAME, JOB FROM SCOTT.EMP WHERE EMPNO IN(SELECT MGR FROM SCOTT.EMP WHERE MGR IS NOT NULL);</p>
+<img src="images/s43.png" alt = "Query output" width = "200">
+
+<h4>44. Display employees who are not managers.</h4>
+<p>SELECT ENAME, EMPNO, JOB, MGR AS MANAGER FROM SCOTT.EMP WHERE EMPNO IN (SELECT EMPNO FROM SCOTT.EMP WHERE MGR IS NULL OR 0);</p>
+<img src="images/s44.png" alt = "Query output" width = "200">
+
+<h4>45. Display employees working in departments where SALESMAN exists.</h4>
+<p>SELECT ENAME, DEPTNO, JOB FROM SCOTT.EMP WHERE DEPTNO IN (SELECT DEPTNO FROM SCOTT.EMP WHERE JOB = 'SALESMAN');</p>
+<img src="images/s45.png" alt = "Query output" width = "200">
+
+<h4>46. Display departments where no SALESMAN exists.</h4>
+<p>SELECT ENAME, DEPTNO, JOB FROM SCOTT.EMP WHERE DEPTNO IN (SELECT DEPTNO FROM SCOTT.EMP WHERE JOB <> 'SALESMAN');</p>
+<img src="images/s46.png" alt = "Query output" width = "200">
+
+<h4>47. Display employees whose department has employees with commission.</h4>
+<p>SELECT ENAME, DEPTNO, COMM AS COMMISSION FROM SCOTT.EMP WHERE DEPTNO IN (SELECT DEPTNO FROM SCOTT.EMP WHERE COMM IS NOT NULL);</p>
+<img src="images/s47.png" alt = "Query output" width = "200">
+
+<h4>48. Display departments where all employees get commission.</h4>
+<p>SELECT DEPTNO, DNAME FROM SCOTT.DEPT WHERE DEPTNO IN (SELECT DEPTNO FROM SCOTT.EMP GROUP BY DEPTNO HAVING COUNT(*) = COUNT(COMM));</p>
+<img src="images/s48.png" alt = "Query output" width = "200">
+
+<h4>49. Display employees whose department has no CLERKs.</h4>
+<p>SELECT ENAME, DEPTNO, JOB FROM SCOTT.EMP WHERE DEPTNO IN (SELECT DEPTNO FROM SCOTT.EMP WHERE JOB <> 'CLERK');</p>
+<img src="images/s49.png" alt = "Query output" width = "200">
+
+<h4>50. Display employees who work in departments located in CHICAGO.</h4>
+<p>SELECT DNAME, DEPTNO, LOC FROM SCOTT.DEPT WHERE DEPTNO IN (SELECT DEPTNO FROM SCOTT.DEPT WHERE LOC = 'CHICAGO');</p>
+<img src="images/s50.png" alt = "Query output" width = "200">
+
+<h4>51. Display department number and average salary of employees whose salary is greater than 2000.</h4>
+<p>SELECT DEPTNO, AVG(SAL) FROM (SELECT DEPTNO, SAL FROM SCOTT.EMP WHERE SAL > 2000)GROUP BY DEPTNO;</p>
+<img src="images/s51.png" alt = "Query output" width = "200">
+
+<h4>52. Display job and total salary of employees earning more than the department average.</h4>
+<p>SELECT JOB, SUM(SAL) FROM (SELECT JOB, SAL FROM SCOTT.EMP WHERE SAL > ( SELECT AVG(SAL) FROM SCOTT.EMP WHERE DEPTNO = SCOTT.EMP.DEPTNO ))GROUP BY JOB;</p>
+<img src="images/s52.png" alt = "Query output" width = "200">
+<h4>53. Display departments having average salary greater than overall average salary.</h4>
+<p>SELECT DEPTNO, AVG(SAL) FROM SCOTT.EMP GROUP BY DEPTNO HAVING AVG(SAL) > (SELECT AVG(SAL)FROM SCOTT.EMP);</p>
+<img src="images/s53.png" alt = "Query output" width = "200">
+
+<h4>54. Display job-wise employee count from employees earning more than 1500.</h4>
+<p>SELECT DEPTNO, AVG(SAL)FROM SCOTT.EMP GROUP BY DEPTNO HAVING AVG(SAL) > (SELECT AVG(SAL)FROM SCOTT.EMP);</p>
+<img src="images/s54.png" alt = "Query output" width = "200">
+
+<h4>55. Display departments having more than 2 employees earning commission.</h4>
+<p>SELECT DEPTNO FROM SCOTT.EMP WHERE COMM IS NOT NULL GROUP BY DEPTNO HAVING COUNT(*) > 2;</p>
+<img src="images/s55.png" alt = "Query output" width = "200">
+
+<h4>56. Display job and maximum salary from employees hired after 1981.</h4>
+<p>SELECT job, MAX(sal) AS max_salary FROM scott.emp WHERE empno IN (SELECT empno FROM scott.emp WHERE hiredate > TO_DATE('31-DEC-1981','DD-MON-YYYY'))GROUP BY job;</p>
+<img src="images/s56.png" alt = "Query output" width = "200">
+
+<h4>57. Display department-wise total salary excluding department 30.</h4>
+<p>SELECT deptno, total_salary FROM (SELECT deptno, SUM(sal) AS total_salary FROM scott.emp GROUP BY deptno)WHERE deptno <> 30;</p>
+<img src="images/s57.png" alt = "Query output" width = "200">
+
+<h4>58. Display departments having total salary greater than overall total salary average.</h4>
+<p>SELECT deptno, SUM(sal) AS total_salary FROM scott.emp GROUP BY deptno HAVING SUM(sal) > (SELECT AVG(dept_total) FROM (SELECT SUM(sal) AS dept_total FROM scott.emp GROUP BY deptno));</p>
+<img src="images/s58.png" alt = "Query output" width = "200">
+
+<h4>59. Display job-wise average salary where department has more than 3 employees.</h4>
+<p>SELECT job, AVG(sal) AS avg_salary FROM scott.emp GROUP BY job HAVING deptno IN (SELECT deptno FROM scott.emp GROUP BY deptno HAVING COUNT(*) > 3);</p>
+<img src="images/s59.png" alt = "Query output" width = "200">
+
+<h4>60. Display department and job having maximum total salary.</h4>
+<p>SELECT deptno, job, SUM(sal) AS total_salary FROM scott.emp GROUP BY deptno, job HAVING SUM(sal) = (SELECT MAX(total_sal)FROM (SELECT SUM(sal) AS total_sal FROM scott.emp GROUP BY deptno, job));</p>
+<img src="images/s60.png" alt = "Query output" width = "200">
+
+<h4>61. Display employees earning the second highest salary.</h4>
+<p>SELECT ENAME, SAL FROM SCOTT.EMP WHERE SAL = (SELECT MAX(SAL) FROM SCOTT.EMP WHERE SAL < (SELECT MAX(SAL) FROM SCOTT.EMP));</p>
+<img src="images/s61.png" alt = "Query output" width = "200">
+
+<h4>62. Display employees earning the third highest salary.</h4>
+<p>SELECT ENAME, SAL FROM SCOTT.EMP WHERE SAL = (SELECT MAX(SAL) FROM SCOTT.EMP WHERE SAL < (SELECT MAX(SAL) FROM SCOTT.EMP WHERE SAL < (SELECT MAX(SAL) FROM SCOTT.EMP)));</p>
+<img src="images/s62.png" alt = "Query output" width = "200">
+
+<h4>63. Display employees whose salary is greater than 50% of employees.</h4>
+<p>SELECT ENAME, SAL FROM SCOTT.EMP WHERE SAL > (SELECT MEDIAN(SAL) FROM SCOTT.EMP);</p>
+<img src="images/s63.png" alt = "Query output" width = "200">
+
+<h4>64. Display employees earning more than the median salary.</h4>
+<p>SELECT ENAME, SAL FROM SCOTT.EMP WHERE SAL > (SELECT MEDIAN(SAL) FROM SCOTT.EMP);</p>
+<img src="images/s64.png" alt = "Query output" width = "200">
+
+<h4>65. Display employees whose salary is equal to department-wise second highest salary.</h4>
+<p>SELECT ENAME, SAL, DEPTNO FROM SCOTT.EMP E WHERE SAL = (SELECT MAX(SAL) FROM SCOTT.EMP WHERE SAL < (SELECT MAX(SAL) FROM SCOTT.EMP WHERE DEPTNO = E.DEPTNO) AND DEPTNO = E.DEPTNO);</p>
+<img src="images/s65.png" alt = "Query output" width = "200">
+
+<h4>66. Display employees whose salary is less than all MANAGERS but more than any CLERK.</h4>
+<p>SELECT ENAME, SAL FROM SCOTT.EMP WHERE SAL < ALL (SELECT SAL FROM SCOTT.EMP WHERE JOB = 'MANAGER') AND SAL > ANY (SELECT SAL FROM SCOTT.EMP WHERE JOB = 'CLERK');</p>
+<img src="images/s66.png" alt = "Query output" width = "200">
+
+<h4>67. Display departments where maximum salary equals minimum salary.</h4>
+<p>SELECT DEPTNO FROM SCOTT.EMP GROUP BY DEPTNO HAVING MAX(SAL) = MIN(SAL);</p>
+<img src="images/s67.png" alt = "Query output" width = "200">
+
+<h4>68. Display employees earning more than the average salary of departments located in DALLAS.</h4>
+<p>SELECT ENAME, SAL FROM SCOTT.EMP WHERE SAL > (SELECT AVG(SAL) FROM SCOTT.EMP WHERE DEPTNO IN (SELECT DEPTNO FROM SCOTT.DEPT WHERE LOC = 'DALLAS'));</p>
+<img src="images/s68.png" alt = "Query output" width = "200">
+
+<h4>69. Display jobs where average salary is greater than overall average salary.</h4>
+<p>SELECT JOB FROM SCOTT.EMP GROUP BY JOB HAVING AVG(SAL) > (SELECT AVG(SAL) FROM SCOTT.EMP);</p>
+<img src="images/s69.png" alt = "Query output" width = "200">
+
+<h4>70. Display employees whose salary is greater than salary of their manager.</h4>
+<p>SELECT E.ENAME, E.SAL FROM SCOTT.EMP E JOIN SCOTT.EMP M ON E.MGR = M.EMPNO WHERE E.SAL > M.SAL;</p>
+<img src="images/s70.png" alt = "Query output" width = "200">
+
+<H1> ---DATA DEFINITION LANGUAGE COMMAND (1-50)---</H1>
+
+<h4>1. Create a table called STUDENT with columns: SID (NUMBER) , SNAME (VARCHAR2(30)) , AGE (NUMBER) , COURSE (VARCHAR2(20)).</h4>
+<p>CREATE TABLE STUDENT (
+  SID NUMBER,
+  SNAME VARCHAR2(30),
+  AGE NUMBER,
+  COURSE VARCHAR2(20)
+);
+</p>
+<img src="images/dl.1.png" alt = "Query output" width = "200">
+
+<h4>2. Create a table EMPLOYEE with columns: EID NUMBER , ENAME VARCHAR2(40) , SALARY NUMBER(8,2) , DEPTNO NUMBER</h4>
+<p>CREATE TABLE EMPLOYEE (
+  EID NUMBER,
+  ENAME VARCHAR2(40),
+  SALARY NUMBER(8,2),
+  DEPTNO NUMBER
+);
+</p>
+<img src="images/dl.2.png" alt = "Query output" width = "200">
+
+<h4>3. Create a table DEPARTMENT with columns: DEPTNO NUMBER , DNAME VARCHAR2(30) , LOCATION VARCHAR2(30)</h4>
+<p>
+CREATE TABLE DEPARTMENT (
+  DEPTNO NUMBER,
+  DNAME VARCHAR2(30),
+  LOCATION VARCHAR2(30)
+);
+</p>
+<img src="images/dl.3.png" alt = "Query output" width = "200">
+
+<h4>4. Create a table BOOK with columns: BOOK_ID NUMBER , TITLE VARCHAR2(50) , AUTHOR VARCHAR2(40) , PRICE NUMBER</h4>
+<p>CREATE TABLE BOOK (
+  BOOK_ID NUMBER,
+  TITLE VARCHAR2(50),
+  AUTHOR VARCHAR2(40),
+  PRICE NUMBER
+);
+</p>
+<img src="images/dl.4.png" alt = "Query output" width = "200">
+
+<h4>5. Create a table COURSE with columns: CID NUMBER , CNAME VARCHAR2(40) , DURATION NUMBER</h4>
+<p>CREATE TABLE COURSE (
+  CID NUMBER,
+  CNAME VARCHAR2(40),
+  DURATION NUMBER
+); </p>
+<img src="images/dl.5.png" alt = "Query output" width = "200">
+
+<h4>6. Create a table PROJECT with columns: PID NUMBER , PNAME VARCHAR2(50) , START_DATE DATE , END_DATE DATE</h4>
+<p>CREATE TABLE PROJECT (
+  PID NUMBER,
+  PNAME VARCHAR2(50),
+  START_DATE DATE,
+  END_DATE DATE
+);</p>
+<img src="images/dl.6.png" alt = "Query output" width = "200">
+
+<h4>7. Create a table CUSTOMER with columns: CID NUMBER , CNAME VARCHAR2(40) , CITY VARCHAR2(30) , PHONE NUMBER</h4>
+<p>CREATE TABLE CUSTOMER (
+  CID NUMBER,
+  CNAME VARCHAR2(40),
+  CITY VARCHAR2(30),
+  PHONE NUMBER
+);</p>
+<img src="images/dl.7.png" alt = "Query output" width = "200">
+
+<h4>8. Create a table SALES with columns: SALE_ID NUMBER , PRODUCT_NAME VARCHAR2(50) , QUANTITY NUMBER , PRICE NUMBER</h4>
+<p>CREATE TABLE SALES (
+  SALE_ID NUMBER,
+  PRODUCT_NAME VARCHAR2(50),
+  QUANTITY NUMBER,
+  PRICE NUMBER
+); </p>
+<img src="images/dl.8.png" alt = "Query output" width = "200">
+
+<h4> 9.Create a table EMP_COPY from the existing EMP table (structure only) </h4>
+<p>CREATE TABLE EMP_COPY AS SELECT * FROM EMP WHERE 1=2;</p>
+<img src="images/dl9.png" alt = "Query output" width = "200">
+
+<h4> 10. Create a table EMP_BACKUP from EMP including data  </h4>
+<p>CREATE TABLE EMP_BACKUP AS SELECT * FROM EMP;</p>
+<img src="images/dl10.png" alt = "Query output" width = "200">
+
+<h4>11. Add a column EMAIL VARCHAR2(50) to the STUDENT table  </h4>
+<p>ALTER TABLE STUDENT ADD EMAIL VARCHAR2(50);</p>
+<img src="images/dl11.png" alt = "Query output" width = "200">
+
+<h4>12. Add a column PHONE NUMBER to the EMPLOYEE table  </h4>
+<p>ALTER TABLE EMPLOYEE ADD PHONE NUMBER;</p>
+<img src="images/dl12.png" alt = "Query output" width = "200">
+
+<h4>13. Modify the column SNAME in STUDENT table to VARCHAR2(50)  </h4>
+<p>ALTER TABLE STUDENT MODIFY SNAME VARCHAR2(50);</p>
+<img src="images/dl13.png" alt = "Query output" width = "200">
+
+<h4>14. Modify the column SALARY in EMPLOYEE table to NUMBER(10,2)</h4>
+<p>ALTER TABLE EMPLOYEE MODIFY SALARY NUMBER(10,2);
+</p>
+<img src="images/dl14.png" alt = "Query output" width = "200">
+
+<h4>15.Add two columns CITY VARCHAR2(30) and PINCODE NUMBER to CUSTOMER table</h4>
+<p>ALTER TABLE CUSTOMER ADD (CITY VARCHAR2(30), PINCODE NUMBER);</p>
+<img src="images/dl15.png" alt = "Query output" width = "200">
+
+<h4>16. Rename the column SNAME to STUDENT_NAME in STUDENT table  </h4>
+<p>ALTER TABLE STUDENT RENAME COLUMN SNAME TO STUDENT_NAME;</p>
+<img src="images/dl16.png" alt = "Query output" width = "200">
+
+<h4>17.Drop the column AGE from STUDENT table  </h4>
+<p>ALTER TABLE STUDENT DROP COLUMN AGE;</p>
+<img src="images/dl17.png" alt = "Query output" width = "200">
+
+<h4>18. Set the column SALARY in EMPLOYEE table to NOT NULL  </h4>
+<p>ALTER TABLE EMPLOYEE MODIFY SALARY NUMBER(10,2) NOT NULL;
+</p>
+<img src="images/dl18.png" alt = "Query output" width = "200">
+
+<h4>19. Increase the size of column TITLE in BOOK table to VARCHAR2(100)  </h4>
+<p>ALTER TABLE BOOK MODIFY TITLE VARCHAR2(100);</p>
+<img src="images/dl19.png" alt = "Query output" width = "200">
+
+<h4>20. Add a column MANAGER_ID NUMBER to EMPLOYEE table  </h4>
+<p>ALTER TABLE EMPLOYEE ADD MANAGER_ID NUMBER;</p>
+<img src="images/dl20.png" alt = "Query output" width = "200">
+
+<h4>21. Drop the table STUDENT</h4>
+<p>DROP TABLE STUDENTS_;</p>
+<img src="images/dl21.png" alt = "Query output" width = "200">
+
+<h4>22.Drop the table CUSTOMER from the database  </h4>
+<p>DROP TABLE CUSTOMER;</p>
+<img src="images/dl22.png" alt = "Query output" width = "200">
+
+<h4>23. Drop the table PROJECT permanently </h4>
+<p>DROP TABLE PROJECT;</p>
+<img src="images/dl23.png" alt = "Query output" width = "200">
+
+<h4>24.Remove the table SALES  </h4>
+<p>DROP TABLE SALES;</p>
+<img src="images/dl24.png" alt = "Query output" width = "200">
+
+<h4>25.Drop the table COURSE  </h4>
+<p>DROP TABLE COURSE;</p>
+<img src="images/dl25.png" alt = "Query output" width = "200">
+
+<h4>26. Rename the table STUDENT to STUDENTS  </h4>
+<p>ALTER TABLE STUDENT RENAME TO STUDENTS_;</p>
+<img src="images/dl26.png" alt = "Query output" width = "200">
+
+<h4>27.Rename the table EMPLOYEE to EMP_MASTER  </h4>
+<p>ALTER TABLE EMPLOYEE RENAME TO EMP_MASTER;</p>
+<img src="images/dl27.png" alt = "Query output" width = "200">
+
+<h4>28. Rename the table CUSTOMER to CLIENT  </h4>
+<p>ALTER TABLE CUSTOMER_ RENAME TO CLIENT;  </p>
+<img src="images/dl28.png" alt = "Query output" width = "200">
+
+<h4>29. Rename the table BOOK to BOOK_DETAILS </h4>
+<p>  ALTER TABLE BOOK_ RENAME TO BOOK_DETAILS_;</p>
+<img src="images/dl29.png" alt = "Query output" width = "200">
+
+<h4>30. Rename the table PROJECT to PROJECT_INFO  </h4>
+<p>  ALTER TABLE PROJECT_ RENAME TO PROJECT_INFO; </p>
+<img src="images/dl30.png" alt = "Query output" width = "200">
+
+<h4>31.Remove all records from the STUDENT table  </h4>
+<p>DELETE FROM STUDENTS_; </p>
+<img src="images/dl31.png" alt = "Query output" width = "200">
+
+<h4> 32. Delete all rows from EMPLOYEE table using TRUNCATE </h4>
+<p> TRUNCATE TABLE EMPLOYEE_; </p>
+<img src="images/dl32.png" alt = "Query output" width = "200">
+
+<h4>33. Empty the CUSTOMER table quickly  </h4>
+<p> TRUNCATE TABLE CUSTOMERS; </p>
+<img src="images/dl33.png" alt = "Query output" width = "200">
+
+<h4>34. Remove all data from SALES table but keep structure  </h4>
+<p> TRUNCATE TABLE SALES; </p>
+<img src="images/dl34.png" alt = "Query output" width = "200">
+
+<h4> 35. Clear the PROJECT table </h4>
+<p> TRUNCATE TABLE PROJECT; </p>
+<img src="images/dl35.png" alt = "Query output" width = "200">
+
+<h4> 36. Create a table TRAINING with columns TID , TNAME , DURATION </h4>
+<p> CREATE TABLE TRAINING (
+  TID NUMBER,
+  TNAME VARCHAR2(30),
+  DURATION NUMBER
+); </p>
+<img src="images/dl36.png" alt = "Query output" width = "200">
+
+<h4>37. Add column TRAINER_NAME VARCHAR2(40) to TRAINING  </h4>
+<p> ALTER TABLE TRAINING ADD TRAINER_NAME VARCHAR2(40); </p>
+<img src="images/dl37.png" alt = "Query output" width = "200">
+
+<h4>38. Modify TNAME column size to VARCHAR2(60)  </h4>
+<p> ALTER TABLE TRAINING MODIFY TNAME VARCHAR2(60); </p>
+<img src="images/dl38.png" alt = "Query output" width = "200">
+
+<h4>39. Rename the TRAINING table to TRAINING_PROGRAM  </h4>
+<p> ALTER TABLE TRAINING RENAME TO TRAINING_PROGRAM; </p>
+<img src="images/dl39.png" alt = "Query output" width = "200">
+
+<h4>40. Truncate the TRAINING_PROGRAM table  </h4>
+<p> TRUNCATE TABLE TRAINING_PROGRAM; </p>
+<img src="images/dl40.png" alt = "Query output" width = "200">
+
+<h4>41. Drop the TRAINING_PROGRAM table  </h4>
+<p> DROP TABLE TRAINING_PROGRAM; </p>
+<img src="images/dl41.png" alt = "Query output" width = "200">
+
+<h4>42. Create a table EMP_PROJECT with the following columns EMP_ID NUMBER , PROJECT_ID NUMBER , START_DATE DATE , END_DATE DATE , ROLE VARCHAR2(30) Later modify the table to increase the size of ROLE to VARCHAR2(50) and add a column STATUS VARCHAR2(20)  </h4>
+<p> 
+CREATE TABLE EMP_PROJECT (
+  EMP_ID NUMBER,
+  PROJECT_ID NUMBER,
+  START_DATE DATE,
+  END_DATE DATE,
+  ROLE VARCHAR2(30)
+);
+ALTER TABLE EMP_PROJECT MODIFY ROLE VARCHAR2(50);
+ALTER TABLE EMP_PROJECT ADD STATUS VARCHAR2(20); </p>
+<img src="images/dl42.png" alt = "Query output" width = "200">
+
+<h4>43. Create a table PRODUCT with columns PID NUMBER , PNAME VARCHAR2(50) , PRICE NUMBER , CATEGORY VARCHAR2(30) Then rename column PNAME to PRODUCT_NAME and change PRICE datatype to NUMBER(10,2)  </h4>
+<p> 
+CREATE TABLE PRODUCT (
+  PID NUMBER,
+  PNAME VARCHAR2(50),
+  PRICE NUMBER,
+  CATEGORY VARCHAR2(30)
+);
+ALTER TABLE PRODUCT RENAME COLUMN PNAME TO PRODUCT_NAME;
+ALTER TABLE PRODUCT MODIFY PRICE NUMBER(10,2);
+ </p>
+<img src="images/dl43.png" alt = "Query output" width = "200">
+
+<h4>44. Create a table ORDERS with columns
+ORDER_ID NUMBER , CUSTOMER_ID NUMBER , ORDER_DATE DATE , TOTAL_AMOUNT NUMBER
+After creation:
+* Add column STATUS VARCHAR2(20)
+* Drop column TOTAL_AMOUNT
+* Add column TOTAL_AMOUNT NUMBER(10,2) again  </h4>
+<p> CREATE TABLE ORDERS_ (
+  ORDER_ID NUMBER,
+  CUSTOMER_ID NUMBER,
+  ORDER_DATE DATE,
+  TOTAL_AMOUNT NUMBER
+);
+ALTER TABLE ORDERS_ ADD STATUS VARCHAR2(20);
+ALTER TABLE ORDERS_ DROP COLUMN TOTAL_AMOUNT;
+ALTER TABLE ORDERS_ ADD TOTAL_AMOUNT NUMBER(10,2); </p>
+<img src="images/dl44.png" alt = "Query output" width = "200">
+
+<h4>45. Create a table EMP_TEMP from the EMP table containing only employees with salary greater than 2000
+Then:
+* Rename the table to EMP_HIGH_SALARY
+* Truncate the table
+* Drop the table  </h4>
+<p> 
+CREATE TABLE EMP_TEMP AS
+SELECT * FROM EMP WHERE SALARY > 2000;
+ALTER TABLE EMP_TEMP RENAME TO EMP_HIGH_SALARY;
+TRUNCATE TABLE EMP_HIGH_SALARY;
+DROP TABLE EMP_HIGH_SALARY; </p>
+<img src="images/dl45.png" alt = "Query output" width = "200">
+
+<h4>46. Create a table STUDENT_RECORD with columns
+SID NUMBER , SNAME VARCHAR2(40) , COURSE VARCHAR2(30) , MARKS NUMBER
+Then perform the following:
+* Add column GRADE CHAR(1)
+* Modify MARKS datatype to NUMBER(5,2)
+* Rename column COURSE to COURSE_NAME  </h4>
+<p> 
+CREATE TABLE STUDENTS_RECORD(
+  SID NUMBER,
+  SNAME VARCHAR2(40),
+  COURSE VARCHAR2(30),
+  MARKS NUMBER
+);
+ALTER TABLE STUDENTS_RECORD ADD GRADE CHAR(1);
+ALTER TABLE STUDENTS_RECORD MODIFY MARKS NUMBER(5,2);
+ALTER TABLE STUDENTS_RECORD RENAME COLUMN COURSE TO COURSE_NAME;
+ </p>
+<img src="images/dl46.png" alt = "Query output" width = "200">
+
+<h4>47. Create a table EMP_ARCHIVE using the structure of the EMP table but without copying data
+Then:
+* Add column ARCHIVE_DATE DATE
+* Rename the table to EMP_HISTORY</h4>
+<p> CREATE TABLE EMP_ARCHIVE AS SELECT * FROM EMP WHERE 1=2;
+ALTER TABLE EMP_ARCHIVE ADD ARCHIVE_DATE DATE;
+ALTER TABLE EMP_ARCHIVE RENAME TO EMP_HISTORY; </p>
+<img src="images/dl47.png" alt = "Query output" width = "200">
+
+<h4>48. Create a table DEPT_BACKUP from DEPT table including all rows
+Then:
+* Drop column LOC
+* Add column LOCATION VARCHAR2(40)  </h4>
+<p> CREATE TABLE DEPT_BACKUP AS SELECT * FROM SCOTT.DEPT;
+ALTER TABLE DEPT_BACKUP DROP COLUMN LOC;
+ALTER TABLE DEPT_BACKUP ADD LOCATION VARCHAR2(40);</p>
+<img src="images/dl48.png" alt = "Query output" width = "200">
+
+<h4>49. Create a table SALES_DATA with columns
+SALE_ID NUMBER , PRODUCT_ID NUMBER , SALE_DATE DATE , AMOUNT NUMBER
+Then perform:
+* Add column REGION VARCHAR2(30)
+* Modify AMOUNT to NUMBER(12,2)
+* Rename the table to REGIONAL_SALES_DATA </h4>
+<p> CREATE TABLE SALES_DATA (
+  SALE_ID NUMBER,
+  PRODUCT_ID NUMBER,
+  SALE_DATE DATE,
+  AMOUNT NUMBER
+);
+ALTER TABLE SALES_DATA ADD REGION VARCHAR2(30);
+ALTER TABLE SALES_DATA MODIFY AMOUNT NUMBER(12,2);
+ALTER TABLE SALES_DATA RENAME TO REGIONAL_SALES_DATA; </p>
+<img src="images/dl49.png" alt = "Query output" width = "200">
+
+<h4>50. Create a table LOG_TABLE with columns
+LOG_ID NUMBER , USER_NAME VARCHAR2(30) , ACTION VARCHAR2(50) , LOG_DATE DATE Then:
+* Truncate the table
+* Rename it to SYSTEM_LOG
+* Drop it permanently  </h4>
+<p> CREATE TABLE LOG_TABLE (
+  LOG_ID NUMBER,
+  USER_NAME VARCHAR2(30),
+  ACTION VARCHAR2(50),
+  LOG_DATE DATE
+);
+TRUNCATE TABLE LOG_TABLE;
+ALTER TABLE LOG_TABLE RENAME TO SYSTEM_LOG;
+DROP TABLE SYSTEM_LOG; </p>
+<img src="images/dl50.png" alt = "Query output" width = "200">
+
+<H1> ---DATA MANIPULATION LANGUAGE COMMAND (1-30)---</H1>
+
+<h4>1. Insert a record into STUDENT</h4>
+<p>INSERT INTO STUDENT VALUES (101, 'RAHUL', 20, 'MCA');</p>
+<img src="images/dm1.png" alt = "Query output" width = "200">
+
+<h4>2. Insert into EMPLOYEE</h4>
+<p>INSERT INTO EMPLOYEE VALUES (201, 'ANITA', 45000, 10);</p>
+<img src="images/dm2.png" alt = "Query output" width = "200">
+
+<h4>3. Insert into DEPT</h4>
+<p>INSERT INTO DEPT VALUES (50, 'TRAINING', 'DELHI');</p>
+<img src="images/DM3.png" alt = "Query output" width = "200">
+
+<h4>4. Insert into BOOK (selected columns)</h4>
+<p>INSERT INTO BOOK (BOOK_ID, TITLE, PRICE) VALUES (1, 'DBMS', 500);</p>
+<img src="images/dm4.png" alt = "Query output" width = "200">
+
+<h4>5. Insert multiple rows into COURSE</h4>
+<p>INSERT ALL INTO COURSE VALUES (1,'MCA',3) INTO COURSE VALUES (2,'BCA',3) INTO COURSE VALUES (3,'MBA',2) SELECT * FROM DUAL;</p>
+<img src="images/dm5.png" alt = "Query output" width = "200">
+
+<h4>6. Insert data into EMP_COPY</h4>
+<p>INSERT INTO EMP_COPY SELECT * FROM EMP;</p>
+<img src="images/dm6.png" alt = "Query output" width = "200">
+
+<h4>7. Insert employees with salary > 3000</h4>
+<p>INSERT INTO EMP_HIGH_SAL SELECT * FROM EMP WHERE SAL > 3000;</p>
+<img src="images/dm7.png" alt = "Query output" width = "200">
+
+<h4>8. Insert employees hired after 1981</h4>
+<p>INSERT INTO EMP_NEW_HIRE SELECT * FROM EMP WHERE HIREDATE > TO_DATE('31-DEC-1981','DD-MON-YYYY');</p>
+<img src="images/dm8.png" alt = "Query output" width = "200">
+
+<h4>9. Insert into DEPT_BACKUP</h4>
+<p>INSERT INTO DEPT_BACKUP (DEPTNO, DNAME) SELECT DEPTNO, DNAME FROM DEPT;</p>
+<img src="images/dm9.png" alt = "Query output" width = "200">
+
+<h4>10. Insert into EMP_SALARY_RECORD</h4>
+<p>INSERT INTO EMP_SALARY_RECORD (ENAME, SAL) SELECT ENAME, SAL FROM EMP;</p>
+<img src="images/dm10.png" alt = "Query output" width = "200">
+
+<h4>11. Update salary of SMITH</h4>
+<p>UPDATE EMP SET SAL = 2000 WHERE ENAME = 'SMITH';</p>
+<img src="images/dm11.png" alt = "Query output" width = "200">
+
+<h4>12. Increase all salaries by 10%</h4>
+<p>UPDATE EMP SET SAL = SAL * 1.10;</p>
+<img src="images/dm12.png" alt = "Query output" width = "200">
+
+<h4>13. Update department of ALLEN</h4>
+<p>UPDATE EMP SET DEPTNO = 20 WHERE ENAME = 'ALLEN';</p>
+<img src="images/dm13.png" alt = "Query output" width = "200">
+
+<h4>14. Update commission of SALESMAN</h4>
+<p>UPDATE EMP SET COMM = 500 WHERE JOB = 'SALESMAN';</p>
+<img src="images/dm14.png" alt = "Query output" width = "200">
+
+<h4>15. Update job of MILLER</h4>
+<p>UPDATE EMP SET JOB = 'MANAGER' WHERE ENAME = 'MILLER';</p>
+<img src="images/dm15.png" alt = "Query output" width = "200">
+
+<h4>16. Increase salary in dept 10</h4>
+<p>UPDATE EMP SET SAL = SAL * 1.20 WHERE DEPTNO = 10;</p>
+<img src="images/dm16.png" alt = "Query output" width = "200">
+
+<h4>17. Update salary of CLERK</h4>
+<p>UPDATE EMP SET SAL = 1500 WHERE JOB = 'CLERK';</p>
+<img src="images/dm17.png" alt = "Query output" width = "200">
+
+<h4>18. Update location of dept 30</h4>
+<p>UPDATE DEPT SET LOC = 'MUMBAI' WHERE DEPTNO = 30;</p>
+<img src="images/dm18.png" alt = "Query output" width = "200">
+
+<h4>19. Update NULL commission</h4>
+<p>UPDATE EMP SET COMM = 100 WHERE COMM IS NULL;</p>
+<img src="images/dm19.png" alt = "Query output" width = "200">
+
+<h4>20. Update salary less than average</h4>
+<p>UPDATE EMP SET SAL = SAL * 1.10 WHERE SAL < (SELECT AVG(SAL) FROM EMP);</p>
+<img src="images/dm20.png" alt = "Query output" width = "200">
+
+<h4>21. Delete SMITH</h4>
+<p>DELETE FROM EMP WHERE ENAME = 'SMITH';</p>
+<img src="images/dm21.png" alt = "Query output" width = "200">
+
+<h4>22. Delete employees in dept 30</h4>
+<p>DELETE FROM EMP WHERE DEPTNO = 30;</p>
+<img src="images/dm22.png" alt = "Query output" width = "200">
+
+<h4>23. Delete salary < 1000</h4>
+<p>DELETE FROM EMP WHERE SAL < 1000;</p>
+<img src="images/dm23.png" alt = "Query output" width = "200">
+
+<h4>24. Delete hired before 1981</h4>
+<p>DELETE FROM EMP WHERE HIREDATE < TO_DATE('01-JAN-1981','DD-MON-YYYY');</p>
+<img src="images/dm24.png" alt = "Query output" width = "200">
+
+<h4>25. Delete employees with NULL commission</h4>
+<p>DELETE FROM EMP WHERE COMM IS NULL;</p>
+<img src="images/dm25.png" alt = "Query output" width = "200">
+
+<h4>26. Delete departments in CHICAGO</h4>
+<p>DELETE FROM DEPT WHERE LOC = 'CHICAGO';</p>
+<img src="images/dm26.png" alt = "Query output" width = "200">
+
+<h4>27. Delete CLERK employees</h4>
+<p>DELETE FROM EMP WHERE JOB = 'CLERK';</p>
+<img src="images/dm27.png" alt = "Query output" width = "200">
+
+<h4>28. Delete employees with minimum salary</h4>
+<p>DELETE FROM EMP WHERE SAL = (SELECT MIN(SAL) FROM EMP);</p>
+<img src="images/dm28.png" alt = "Query output" width = "200">
+
+<h4>29. Delete employees in NEW YORK departments</h4>
+<p>DELETE FROM EMP WHERE DEPTNO IN (SELECT DEPTNO FROM DEPT WHERE LOC = 'NEW YORK');</p>
+<img src="images/dm29.png" alt = "Query output" width = "200">
+
+<h4>30. Delete employees with NULL manager</h4>
+<p>DELETE FROM EMP WHERE MGR IS NULL;</p>
+<img src="images/dm30.png" alt = "Query output" width = "200">
+
+
+<h1>---JOINS: INNER, CARTESIAN OR CROSS, LEFT OUTER, RIGHT OUTER, FULL OUTER (1-40)---</h1>
+
+
+<h4>1. Display employee name and department name.</h4>
+<p>SELECT e.ENAME, d.DNAME FROM scott.EMP e JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO; </p>
+<img src="images/j1.png" alt = "Query output" width = "200">
+
+<h4>2. Display employee name, salary, and department location.</h4>
+<p>SELECT e.ENAME, e.SAL, d.LOC FROM scott.EMP e JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO; </p>
+<img src="images/j2.png" alt = "Query output" width = "200">
+
+<h4>3. Display employee name and department name for department 10.</h4>
+<p> SELECT e.ENAME, d.DNAME FROM scott.EMP e JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO WHERE e.DEPTNO = 10;</p>
+<img src="images/j3.png" alt = "Query output" width = "200">
+
+<h4>4. Display employee name and department name where salary > 2000.</h4>
+<p>SELECT e.ENAME, d.DNAME FROM scott.EMP e JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO WHERE e.SAL > 2000;</p>
+<img src="images/j4.png" alt = "Query output" width = "200">
+
+<h4>5. Display employee name, job, and department name.</h4>
+<p>SELECT e.ENAME, e.JOB, d.DNAME FROM scott.EMP e JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO;</p>
+<img src="images/j5.png" alt = "Query output" width = "200">
+
+
+<h4>6. Display employee name and department location for CLERKs.</h4>
+<p>SELECT e.ENAME, d.LOC FROM scott.EMP e JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO WHERE e.JOB = 'CLERK';</p>
+<img src="images/j6.png" alt = "Query output" width = "200">
+
+
+<h4>7. Display employee name and department name working in NEW YORK.</h4>
+<p> SELECT e.ENAME, d.DNAME FROM scott.EMP e JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO WHERE d.LOC = 'NEW YORK';</p>
+<img src="images/j7.png" alt = "Query output" width = "200">
+
+
+<h4>8. Display employee name, department number, and department name.</h4>
+<p> SELECT e.ENAME, e.DEPTNO, d.DNAME FROM scott.EMP e JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO;</p>
+<img src="images/j8.png" alt = "Query output" width = "200">
+
+
+<h4>9. Display employees hired after 1981 with department name.</h4>
+<p>SELECT e.ENAME, d.DNAME FROM scott.EMP e JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO WHERE e.HIREDATE > '31-DEC-1981';</p>
+<img src="images/j9.png" alt = "Query output" width = "200">
+
+<h4>10. Display employees with commission along with department name.</h4>
+<p>SELECT e.ENAME, d.DNAME FROM scott.EMP e JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO WHERE e.COMM IS NOT NULL;</p>
+<img src="images/j10.png" alt = "Query output" width = "200">
+
+<h4>11. Display employees whose salary is between 1500 and 3000 with department.</h4>
+<p> SELECT e.ENAME, d.DNAME FROM scott.EMP e JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO WHERE e.SAL BETWEEN 1500 AND 3000;</p>
+<img src="images/Screenshots/j11.png" alt = "Query output" width = "200">
+
+<h4>12. Display employees who are the only employee in their department.</h4>
+SELECT ENAME FROM scott.EMP WHERE DEPTNO IN (SELECT DEPTNO FROM scott.EMP GROUP BY DEPTNO HAVING COUNT(*) = 1);
+<img src="images/Screenshots/j12.png" alt = "Query output" width = "200">
+
+<h4>13. Display employees whose department has more than 3 employees.</h4>
+<p> SELECT ENAME FROM scott.EMP WHERE DEPTNO IN (SELECT DEPTNO FROM scott.EMP GROUP BY DEPTNO HAVING COUNT(*) > 3);</p>
+<img src="images/Screenshots/j13.png" alt = "Query output" width = "200">
+
+<h4>14. Display departments where no employee earns more than 2000.</h4>
+<p>SELECT d.DNAME FROM DEPT d WHERE d.DEPTNO NOT IN (SELECT DEPTNO FROM scott.EMP WHERE SAL > 2000);</p>
+<img src="images/Screenshots/j14.png" alt = "Query output" width = "200">
+
+<h4>15. Display employees who earn more than at least one manager.</h4>
+<p>SELECT ENAME FROM scott.EMP WHERE SAL > ANY (SELECT SAL FROM scott.EMP WHERE JOB = 'MANAGER');</p>
+<img src="images/Screenshots/j15.png" alt = "Query output" width = "200">
+
+<h4>16. Display employees who share same job and department.</h4>
+<p> SELECT e1.ENAME FROM scott.EMP e1, scott.EMP e2 WHERE e1.JOB = e2.JOB AND e1.DEPTNO = e2.DEPTNO AND e1.EMPNO <> e2.EMPNO;</p>
+<img src="images/Screenshots/j16.png" alt = "Query output" width = "200">
+
+<h4>17. Display employees working in same department as their manager.</h4>
+<p>SELECT e.ENAME FROM scott.EMP e JOIN scott.EMP m ON e.MGR = m.EMPNO WHERE e.DEPTNO = m.DEPTNO;</p>
+<img src="images/Screenshots/j17.png" alt = "Query output" width = "200">
+
+<h4>18. Display employees whose manager works in a different department.</h4>
+<p> SELECT e.ENAME FROM scott.EMP e JOIN scott.EMP m ON e.MGR = m.EMPNO WHERE e.DEPTNO <> m.DEPTNO;</p>
+<img src="images/Screenshots/j18.png" alt = "Query output" width = "200">
+
+<h4>19. Display employees who are highest paid in their department.</h4>
+<p>SELECT ENAME FROM scott.EMP e WHERE SAL = (SELECT MAX(SAL) FROM EMP WHERE DEPTNO = e.DEPTNO);</p>
+<img src="images/Screenshots/j19.png" alt = "Query output" width = "200">
+
+<h4>20. Display employees earning more than their department average.</h4>
+<p> SELECT ENAME FROM scott.EMP e WHERE SAL > (SELECT AVG(SAL) FROM scott.EMP WHERE DEPTNO = e.DEPTNO);</p>
+<img src="images/Screenshots/j20.png" alt = "Query output" width = "200">
+
+<h4>21. Display department with maximum employees.</h4>
+<p>SELECT DEPTNO FROM scott.EMP GROUP BY DEPTNO HAVING COUNT(*) = (SELECT MAX(COUNT(*)) FROM scott.EMP GROUP BY DEPTNO);</p>
+<img src="images/Screenshots/j21.png" alt = "Query output" width = "200">
+
+<h4>22. Display department with highest total salary.</h4>
+<p>SELECT DEPTNO FROM scott.EMP GROUP BY DEPTNO HAVING SUM(SAL) = (SELECT MAX(SUM(SAL)) FROM scott.EMP GROUP BY DEPTNO);</p>
+<img src="images/Screenshots/j22.png" alt = "Query output" width = "200">
+
+<h4>23. Display department name and average salary.</h4>
+SELECT d.DNAME, AVG(e.SAL) FROM scott.EMP e JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO GROUP BY d.DNAME;
+<img src="images/Screenshots/j23.png" alt = "Query output" width = "200">
+
+<h4>24. Display department name and total salary.</h4>
+<p>SELECT d.DNAME, SUM(e.SAL) FROM scott.EMP e JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO GROUP BY d.DNAME;</p>
+<img src="images/Screenshots/j24.png" alt = "Query output" width = "200">
+
+<h4>25. Display department name and number of employees.</h4>
+<p>SELECT d.DNAME, COUNT(e.EMPNO) FROM scott.DEPT d LEFT JOIN scott.EMP e ON d.DEPTNO = e.DEPTNO GROUP BY d.DNAME;</p>
+<img src="images/Screenshots/j25.png" alt = "Query output" width = "200">
+
+<h4>26. Display employees not assigned to any department.</h4>
+<p> SELECT ENAME FROM scott.EMP WHERE DEPTNO IS NULL;</p>
+<img src="images/Screenshots/j26.png" alt = "Query output" width = "200">
+
+<h4>27. Display departments with no employees.</h4>
+<p> SELECT d.DNAME FROM DEPT d LEFT JOIN scott.EMP e ON d.DEPTNO = e.DEPTNO WHERE e.EMPNO IS NULL;</p>
+<img src="images/Screenshots/j27.png" alt = "Query output" width = "200">
+
+<h4>28. Display all departments with employees (even if no employees).</h4>
+<p>SELECT d.DNAME, e.ENAME FROM scott.DEPT d LEFT JOIN scott.EMP e ON d.DEPTNO = e.DEPTNO;</p>
+<img src="images/Screenshots/j28.png" alt = "Query output" width = "200">
+
+<h4>29. Display all employees with department name (even if no department).</h4>
+<p> SELECT e.ENAME, d.DNAME FROM scott.EMP e LEFT JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO;</p>
+<img src="images/Screenshots/j29.png" alt = "Query output" width = "200">
+
+<h4>30. Display employees whose manager works in department 10.</h4>
+<p>SELECT e.ENAME FROM scott.EMP e JOIN scott.EMP m ON e.MGR = m.EMPNO WHERE m.DEPTNO = 10;</p>
+<img src="images/Screenshots/j30.png" alt = "Query output" width = "200">
+
+<h4>31. Display employees working under the same manager.</h4>
+<p>SELECT e1.ENAME FROM scott.EMP e1, scott.EMP e2 WHERE e1.MGR = e2.MGR AND e1.EMPNO <> e2.EMPNO;</p>
+<img src="images/Screenshots/j31.png" alt = "Query output" width = "200">
+
+<h4>32. Display employees earning more than their manager.</h4>
+<p>SELECT e.ENAME FROM scott.EMP e JOIN scott.EMP m ON e.MGR = m.EMPNO WHERE e.SAL > m.SAL;</p>
+<img src="images/Screenshots/j32.png" alt = "Query output" width = "200">
+
+<h4>33. Display employee name and manager salary.</h4>
+<p> SELECT e.ENAME, m.SAL FROM scott.EMP e JOIN scott.EMP m ON e.MGR = m.EMPNO;</p>
+<img src="images/Screenshots/j33.png" alt = "Query output" width = "200">
+
+<h4>34. Display employees who are managers.</h4>
+<p> SELECT ENAME FROM scott.EMP WHERE EMPNO IN (SELECT DISTINCT MGR FROM scott.EMP WHERE MGR IS NOT NULL);</p>
+<img src="images/Screenshots/j34.png" alt = "Query output" width = "200">
+
+<h4>35. Display employees who do not have managers.</h4>
+<p>SELECT ENAME FROM scott.EMP WHERE MGR IS NULL;</p>
+<img src="images/Screenshots/j35.png" alt = "Query output" width = "200">
+
+<h4>36. Display employee name and manager name.</h4>
+<p> SELECT e.ENAME, m.ENAME FROM scott.EMP e LEFT JOIN scott.EMP m ON e.MGR = m.EMPNO;</p>
+<img src="images/Screenshots/j36.png" alt = "Query output" width = "200">
+
+<h4>37. Display employees whose department location is DALLAS.</h4>
+<p>SELECT e.ENAME FROM scott.EMP e JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO WHERE d.LOC = 'DALLAS';</p>
+<img src="images/Screenshots/j37.png" alt = "Query output" width = "200">
+
+<h4>38. Display employees whose department is ACCOUNTING.</h4>
+<p>SELECT e.ENAME FROM scott.EMP e JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO WHERE d.DNAME = 'ACCOUNTING';</p>
+<img src="images/Screenshots/j38.png" alt = "Query output" width = "200">
+
+<h4>39. Display employees not working in department 30 with department name.</h4>
+<p> SELECT e.ENAME, d.DNAME FROM scott.EMP e JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO WHERE e.DEPTNO <> 30;</p>
+<img src="images/Screenshots/j39.png" alt = "Query output" width = "200">
+
+<h4>40. Display employees whose job is MANAGER with department location.</h4>
+<p>SELECT e.ENAME, d.LOC FROM scott.EMP e JOIN scott.DEPT d ON e.DEPTNO = d.DEPTNO WHERE e.JOB = 'MANAGER';</p>
+<img src="images/Screenshots/j40.png" alt = "Query output" width = "200">
+
+<h1>---SET OPERATORS: UNION, UNION ALL, INTERSECT, MINUS (1-25)---</h1>
+
+<h4>1. Department numbers using UNION</h4>
+<p>
+SELECT deptno FROM scott.emp
+UNION
+SELECT deptno FROM scott.dept;
+</p>
+<img src="images/u1.png" alt = "Query output" width = "200">
+
+<h4>2. Department numbers using UNION ALL</h4>
+<p>
+SELECT deptno FROM scott.emp
+UNION ALL
+SELECT deptno FROM scott.dept;
+</p>
+<img src="images/u2.png" alt = "Query output" width = "200">
+
+<h4>3. Department numbers using INTERSECT</h4>
+<p>
+SELECT deptno FROM scott.emp
+INTERSECT
+SELECT deptno FROM scott.dept;
+</p>
+<img src="images/u3.png" alt = "Query output" width = "200">
+
+<h4>4. Dept in EMP but not in DEPT</h4>
+<p>
+SELECT deptno FROM scott.emp
+MINUS
+SELECT deptno FROM scott.dept;
+</p>
+<img src="images/u4.png" alt = "Query output" width = "200">
+
+<h4>5. Dept in DEPT but not assigned</h4>
+<p>
+SELECT deptno FROM scott.dept
+MINUS
+SELECT deptno FROM scott.emp;
+</p>
+<img src="images/u5.png" alt = "Query output" width = "200">
+
+<h4>6. Employee names and department names (UNION)</h4>
+<p>
+SELECT ename FROM scott.emp
+UNION
+SELECT dname FROM scott.dept;
+</p>
+<img src="images/u6.png" alt = "Query output" width = "200">
+
+<h4>7. Employee names and department names (UNION ALL)</h4>
+<p>
+SELECT ename FROM scott.emp
+UNION ALL
+SELECT dname FROM scott.dept;
+</p>
+<img src="images/u7.png" alt = "Query output" width = "200">
+
+<h4>8. Jobs matching department names</h4>
+<p>
+SELECT job FROM scott.emp
+INTERSECT
+SELECT dname FROM scott.dept;
+</p>
+<img src="images/u8.png" alt = "Query output" width = "200">
+
+<h4>9. Employee names not department names</h4>
+<p>
+SELECT ename FROM scott.emp
+MINUS
+SELECT dname FROM scott.dept;
+</p>
+<img src="images/u9.png" alt = "Query output" width = "200">
+
+<h4>10. Department locations not used</h4>
+<p>
+SELECT loc FROM scott.dept
+MINUS
+SELECT d.loc FROM scott.emp e JOIN scott.dept d ON e.deptno = d.deptno;
+</p>
+<img src="images/u10.png" alt = "Query output" width = "200">
+
+<h4>11. Employees from dept 10 and 20 (UNION)</h4>
+<p>
+SELECT ename FROM scott.emp WHERE deptno = 10
+UNION
+SELECT ename FROM scott.emp WHERE deptno = 20;
+</p>
+<img src="images/u11.png" alt = "Query output" width = "200">
+
+<h4>12. Employees from dept 10 and 20 (UNION ALL)</h4>
+<p>
+SELECT ename FROM scott.emp WHERE deptno = 10
+UNION ALL
+SELECT ename FROM scott.emp WHERE deptno = 20;
+</p>
+<img src="images/u12.png" alt = "Query output" width = "200">
+
+<h4>13. Employees in valid departments</h4>
+<p>
+SELECT deptno FROM scott.emp
+INTERSECT
+SELECT deptno FROM scott.dept;
+</p>
+<img src="images/u13.png" alt = "Query output" width = "200">
+
+<h4>14. Employees in invalid departments</h4>
+<p>
+SELECT deptno FROM scott.emp
+MINUS
+SELECT deptno FROM scott.dept;
+</p>
+<img src="images/u14.png" alt = "Query output" width = "200">
+
+<h4>15. Dept numbers having employees and existing in DEPT</h4>
+<p>
+SELECT deptno FROM scott.emp
+INTERSECT
+SELECT deptno FROM scott.dept;
+</p>
+<img src="images/u15.png" alt = "Query output" width = "200">
+
+<h4>16. Unique jobs and department names</h4>
+<p>
+SELECT job FROM scott.emp
+UNION
+SELECT dname FROM scott.dept;
+</p>
+<img src="images/u16.png" alt = "Query output" width = "200">
+
+<h4>17. Common values between job and location</h4>
+<p>
+SELECT job FROM scott.emp
+INTERSECT
+SELECT loc FROM scott.dept;
+</p>
+<img src="images/u17.png" alt = "Query output" width = "200">
+
+<h4>18. Employees not assigned to valid department</h4>
+<p>
+SELECT ename FROM scott.emp
+WHERE deptno IN (
+  SELECT deptno FROM scott.emp
+  MINUS
+  SELECT deptno FROM scott.dept
+);
+</p>
+<img src="images/u18.png" alt = "Query output" width = "200">
+
+<h4>19. Employees salary >2000 OR dept 10</h4>
+<p>
+SELECT ename FROM scott.emp WHERE sal > 2000
+UNION
+SELECT ename FROM scott.emp WHERE deptno = 10;
+</p>
+<img src="images/u19.png" alt = "Query output" width = "200">
+
+<h4>20. Employees in dept 10 but not 20</h4>
+<p>
+SELECT ename FROM scott.emp WHERE deptno = 10
+MINUS
+SELECT ename FROM scott.emp WHERE deptno = 20;
+</p>
+<img src="images/u20.png" alt = "Query output" width = "200">
+
+<h4>21. Dept in both EMP and DEPT excluding 10</h4>
+<p>
+SELECT deptno FROM scott.emp
+INTERSECT
+SELECT deptno FROM scott.dept
+MINUS
+SELECT 10 FROM dual;
+</p>
+<img src="images/u21.png" alt = "Query output" width = "200">
+
+<h4>22. All names sorted</h4>
+<p>
+SELECT ename AS name FROM scott.emp
+UNION
+SELECT dname FROM scott.dept
+ORDER BY name;
+</p>
+<img src="images/u22.png" alt = "Query output" width = "200">
+
+<h4>23. Dept numbers appearing more than once</h4>
+<p>
+SELECT deptno FROM scott.emp
+UNION ALL
+SELECT deptno FROM scott.emp;
+</p>
+<img src="images/u23.png" alt = "Query output" width = "200">
+
+<h4>24. Employees from NEW YORK and DALLAS</h4>
+<p>
+SELECT e.ename FROM scott.emp e
+JOIN scott.dept d ON e.deptno = d.deptno
+WHERE d.loc = 'NEW YORK'
+UNION
+SELECT e.ename FROM scott.emp e
+JOIN scott.dept d ON e.deptno = d.deptno
+WHERE d.loc = 'DALLAS';
+</p>
+<img src="images/u24.png" alt = "Query output" width = "200">
+
+<h4>25. Salary >3000 or MANAGER (no duplicates)</h4>
+<p>
+SELECT ename FROM scott.emp WHERE sal > 3000
+UNION
+SELECT ename FROM scott.emp WHERE job = 'MANAGER';
+</p>
+<img src="images/u25.png" alt = "Query output" width = "200">
+
+
+<h1>--- VIEWS VIEWS: CREATE, DROP, MATERLIZED (1-35) ---</h1>
+
+
+<h4>1. View for employee name, salary, deptno</h4>
+<p>
+CREATE VIEW emp_view1 AS
+SELECT ename, sal, deptno FROM emp2;
+</p>
+<img src="images/v1.png" alt="Query output" width="200">
+
+<h4>2. View for employee name and department name</h4>
+<p>
+CREATE VIEW emp_dept_view AS
+SELECT e.ename, d.dname
+FROM emp2 e JOIN dept1 dS
+ON e.deptno = d.deptno;
+</p>
+<img src="images/v2.png" alt="Query output" width="200">
+
+<h4>3. Employees in department 10</h4>
+<p>
+CREATE VIEW dept10_view AS
+SELECT * FROM emp2 WHERE deptno = 10;
+</p>
+<img src="images/v3.png" alt="Query output" width="200">
+
+<h4>4. Employee name, job, annual salary</h4>
+<p>
+CREATE VIEW annual_sal_view AS
+SELECT ename, job, sal*12 AS annual_salary FROM emp2;
+</p>
+<img src="images/v4.png" alt="Query output" width="200">
+
+<h4>5. Department name and location</h4>
+<p>
+CREATE VIEW dept_view AS
+SELECT dname, loc FROM dept1;
+</p>
+<img src="images/v5.png" alt="Query output" width="200">
+
+<h4>6. Employee name, dept name, location</h4>
+<p>
+CREATE VIEW emp_full_view AS
+SELECT e.ename, d.dname, d.loc
+FROM emp2 e JOIN dept1 d
+ON e.deptno = d.deptno;
+</p>
+<img src="images/v6.png" alt="Query output" width="200">
+
+<h4>7. Employees earning more than 3000</h4>
+<p>
+CREATE VIEW high_sal_view AS
+SELECT * FROM emp2 WHERE sal > 3000;
+</p>
+<img src="images/v7.png" alt="Query output" width="200">
+
+<h4>8. Dept-wise total salary</h4>
+<p>
+CREATE VIEW dept_sal_view AS
+SELECT deptno, SUM(sal) AS total_salary
+FROM emp2 GROUP BY deptno;
+</p>
+<img src="images/v8.png" alt="Query output" width="200">
+
+<h4>9. Only managers</h4>
+<p>
+CREATE VIEW manager_view AS
+SELECT * FROM emp2 WHERE job = 'MANAGER';
+</p>
+<img src="images/v9.png" alt="Query output" width="200">
+
+<h4>10. View with aliases</h4>
+<p>
+CREATE VIEW alias_view AS
+SELECT ename AS employee_name, sal AS salary FROM emp2;
+</p>
+<img src="images/v10.png" alt="Query output" width="200">
+
+<h4>11. Dept 20 with CHECK OPTION</h4>
+<p>
+CREATE VIEW dept20_view AS
+SELECT * FROM emp2 WHERE deptno = 20
+WITH CHECK OPTION;
+</p>
+<img src="images/v11.png" alt="Query output" width="200">
+
+<h4>12. Valid insert into dept20 view</h4>
+<p>
+INSERT INTO dept20_view VALUES (9999,'TEST','CLERK',NULL,SYSDATE,1000,NULL,20);
+</p>
+<img src="images/v12.png" alt="Query output" width="200">
+
+<h4>13. Invalid insert (dept 30)</h4>
+<p>
+INSERT INTO dept20_view VALUES (9998,'TEST2','CLERK',NULL,SYSDATE,1000,NULL,30);
+</p>
+<img src="images/v13.png" alt="Query output" width="200">
+
+<h4>14. Update dept 20 to 30</h4>
+<p>
+UPDATE dept20_view SET deptno = 30;
+ERROR due to CHECK OPTION
+</p>
+<img src="images/v14.png" alt="Query output" width="200">
+
+<h4>15. Salary >2000 with CHECK OPTION</h4>
+<p>
+CREATE VIEW sal_view AS
+SELECT * FROM emp2 WHERE sal > 2000
+WITH CHECK OPTION;
+</p>
+<img src="images/v15.png" alt="Query output" width="200">
+
+<h4>16. Read only emp view</h4>
+<p>
+CREATE VIEW readonly_emp AS
+SELECT * FROM emp2
+WITH READ ONLY;
+</p>
+<img src="images/v16.png" alt="Query output" width="200">
+
+<h4>17. Read only join view</h4>
+<p>
+CREATE VIEW readonly_join AS
+SELECT e.ename, d.dname
+FROM emp2 e JOIN dept1 d
+ON e.deptno = d.deptno
+WITH READ ONLY;
+</p>
+<img src="images/v17.png" alt="Query output" width="200">
+
+<h4>18. Update in read only view</h4>
+<p>
+UPDATE readonly_emp SET sal = 5000;
+ERROR: view is read only
+</p>
+<img src="images/v18.png" alt="Query output" width="200">
+
+<h4>19. Insert in read only view</h4>
+<p>
+INSERT INTO readonly_emp VALUES (...);
+ERROR: view is read only
+</p>
+<img src="images/v19.png" alt="Query output" width="200">
+
+<h4>20. Read only dept 10</h4>
+<p>
+CREATE VIEW dept10_read AS
+SELECT * FROM emp2 WHERE deptno = 10
+WITH READ ONLY;
+</p>
+<img src="images/v20.png" alt="Query output" width="200">
+
+<h4>21. Materialized view basic</h4>
+<p>
+CREATE MATERIALIZED VIEW mv_emp AS
+SELECT ename, sal FROM emp2;
+</p>
+<img src="images/v21.png" alt="Query output" width="200">
+
+<h4>22. Materialized view join</h4>
+<p>
+CREATE MATERIALIZED VIEW mv_join AS
+SELECT e.ename, d.dname
+FROM emp2 e JOIN dept1 d
+ON e.deptno = d.deptno;
+</p>
+<img src="images/v22.png" alt="Query output" width="200">
+
+<h4>23. Materialized view refresh complete</h4>
+<p>
+CREATE MATERIALIZED VIEW mv_complete
+REFRESH COMPLETE
+AS SELECT * FROM emp2;
+</p>
+<img src="images/v23.png" alt="Query output" width="200">
+
+<h4>24. Materialized view refresh fast</h4>
+<p>
+CREATE MATERIALIZED VIEW mv_fast
+REFRESH FAST
+AS SELECT * FROM emp2;
+</p>
+<img src="images/v24.png" alt="Query output" width="200">
+
+<h4>25. Materialized view on commit</h4>
+<p>
+CREATE MATERIALIZED VIEW mv_commit
+REFRESH ON COMMIT
+AS SELECT * FROM emp2;
+</p>
+<img src="images/v25.png" alt="Query output" width="200">
+
+<h4>26. MV dept-wise salary</h4>
+<p>
+CREATE MATERIALIZED VIEW mv_dept_sal AS
+SELECT deptno, SUM(sal) total
+FROM emp2 GROUP BY deptno;
+</p>
+<img src="images/v26.png" alt="Query output" width="200">
+
+<h4>27. MV build immediate</h4>
+<p>
+CREATE MATERIALIZED VIEW mv_immediate
+BUILD IMMEDIATE
+AS SELECT * FROM emp2;
+</p>
+<img src="images/v27.png" alt="Query output" width="200">
+
+<h4>28. MV build deferred</h4>
+<p>
+CREATE MATERIALIZED VIEW mv_deferred
+BUILD DEFERRED
+AS SELECT * FROM emp2;
+</p>
+<img src="images/v28.png" alt="Query output" width="200">
+
+<h4>29. Manual refresh</h4>
+<p>
+EXEC DBMS_MVIEW.REFRESH('MV_EMP');
+</p>
+<img src="images/v29.png" alt="Query output" width="200">
+
+<h4>30. Drop MV</h4>
+<p>
+DROP MATERIALIZED VIEW mv_emp;
+</p>
+<img src="images/v30.png" alt="Query output" width="200">
+
+<h4>31. View with CHECK OPTION</h4>
+<p>
+CREATE VIEW check_view AS
+SELECT e.ename, d.dname
+FROM emp2 e JOIN dept1 d
+ON e.deptno = d.deptno
+WHERE e.deptno = 10
+WITH CHECK OPTION;
+</p>
+<img src="images/v31.png" alt="Query output" width="200">
+
+<h4>32. Read only join with salary</h4>
+<p>
+CREATE VIEW readonly_full AS
+SELECT e.ename, d.dname, e.sal
+FROM emp2 e JOIN dept1 d
+ON e.deptno = d.deptno
+WITH READ ONLY;
+</p>
+<img src="images/v32.png" alt="Query output" width="200">
+
+<h4>33. Dept highest salary</h4>
+<p>
+CREATE VIEW max_sal_view AS
+SELECT d.dname, MAX(e.sal) max_sal
+FROM emp2 e JOIN dept1 d
+ON e.deptno = d.deptno
+GROUP BY d.dname;
+</p>
+<img src="images/v33.png" alt="Query output" width="200">
+
+<h4>34. MV for above</h4>
+<p>
+CREATE MATERIALIZED VIEW mv_max_sal AS
+SELECT d.dname, MAX(e.sal) max_sal
+FROM emp2 e JOIN dept1 d
+ON e.deptno = d.deptno
+GROUP BY d.dname;
+</p>
+<img src="images/v34.png" alt="Query output" width="200">
+
+<h4>35. Hide salary view</h4>
+<p>
+CREATE VIEW secure_view AS
+SELECT e.ename, d.dname
+FROM emp2 e JOIN dept1 d
+ON e.deptno = d.deptno;
+</p>
+<img src="images/v35.png" alt="Query output" width="200">
+
+
+<h1>---TRANSACTION CONTROL LANGUAGE (TCL) and DATA CONTROL LANGUAGE (DCL) (1-35)---</h1>
+
+
+<h4>1. Grant SELECT to USER1</h4>
+<p>
+GRANT SELECT ON emp2 TO system;
+</p>
+<img src="images/t1.png" alt="Query output" width="200">
+
+<h4>2. Grant SELECT, INSERT to USER2</h4>
+<p>
+GRANT SELECT, INSERT ON emp2 TO system;
+</p>
+<img src="images/t2.png" alt="Query output" width="200">
+
+<h4>3. Grant ALL on DEPT to USER3</h4>
+<p>
+GRANT ALL ON dept TO system;
+</p>
+<img src="images/t3.png" alt="Query output" width="200">
+
+<h4>4. Grant SELECT with GRANT OPTION</h4>
+<p>
+GRANT SELECT ON emp2 TO system WITH GRANT OPTION;
+</p>
+<img src="images/t4.png" alt="Query output" width="200">
+
+<h4>5. Grant UPDATE on SAL column</h4>
+<p>
+GRANT UPDATE (sal) ON emp2 TO system;
+</p>
+<img src="images/t5.png" alt="Query output" width="200">
+
+<h4>6. Grant DELETE to USER6</h4>
+<p>
+GRANT DELETE ON emp2 to system;
+</p>
+<img src="images/t6.png" alt="Query output" width="200">
+
+<h4>7. Grant SELECT on EMP and DEPT</h4>
+<p>
+GRANT SELECT ON emp2 TO system;
+GRANT SELECT ON dept1 TO system;
+</p>
+<img src="images/t7.png" alt="Query output" width="200">
+
+<h4>8. Grant to PUBLIC</h4>
+<p>
+GRANT SELECT ON emp2 TO PUBLIC;
+</p>
+<img src="images/t8.png" alt="Query output" width="200">
+
+<h4>9. Grant INSERT with GRANT OPTION</h4>
+<p>
+GRANT INSERT ON emp2 TO system WITH GRANT OPTION;
+</p>
+<img src="images/t9.png" alt="Query output" width="200">
+
+<h4>10. Grant UPDATE and DELETE</h4>
+<p>
+GRANT UPDATE, DELETE ON emp2 TO system;
+</p>
+<img src="images/t10.png" alt="Query output" width="200">
+
+<h4>11. Revoke SELECT from USER1</h4>
+<p>
+REVOKE SELECT ON emp2 FROM system;
+</p>
+<img src="images/t11.png" alt="Query output" width="200">
+
+<h4>12. Revoke INSERT, UPDATE from USER2</h4>
+<p>
+REVOKE INSERT, UPDATE ON emp2 FROM system;
+</p>
+<img src="images/t12.png" alt="Query output" width="200">
+
+<h4>13. Revoke ALL from USER3</h4>
+<p>
+REVOKE ALL ON dept1 FROM system;
+</p>
+<img src="images/t13.png" alt="Query output" width="200">
+
+<h4>14. Revoke GRANT OPTION</h4>
+<p>
+GRANT SELECT ON emp2 TO system WITH GRANT OPTION;
+</p>
+<img src="images/t14.png" alt="Query output" width="200">
+
+<h4>15. Revoke UPDATE on SAL</h4>
+<p>
+GRANT UPDATE ON emp2 TO system;
+REVOKE UPDATE ON emp2 FROM system;
+</p>
+<img src="images/t15.png" alt="Query output" width="200">
+
+<h4>16. Revoke DELETE</h4>
+<p>
+REVOKE DELETE ON emp2 FROM system;
+</p>
+<img src="images/t16.png" alt="Query output" width="200">
+
+<h4>17. Revoke from PUBLIC</h4>
+<p>
+REVOKE SELECT ON emp2 FROM PUBLIC;
+</p>
+<img src="images/t17.png" alt="Query output" width="200">
+
+<h4>18. Revoke all from USER9</h4>
+<p>
+REVOKE ALL ON emp2 FROM system;
+</p>
+<img src="images/t18.png" alt="Query output" width="200">
+
+<h4>19. Insert and commit</h4>
+<p>
+INSERT INTO emp2 VALUES (9999,'A','CLERK',NULL,SYSDATE,1000,NULL,10);
+COMMIT;
+</p>
+<img src="images/t19.png" alt="Query output" width="200">
+
+<h4>20. Update and commit</h4>
+<p>
+UPDATE emp2 SET sal = sal + 100 WHERE deptno = 10;
+COMMIT;
+</p>
+<img src="images/t20.png" alt="Query output" width="200">
+
+<h4>21. Delete and commit</h4>
+<p>
+DELETE FROM emp2 WHERE sal < 1000;
+COMMIT;
+</p>
+<img src="images/t21.png" alt="Query output" width="200">
+
+<h4>22. Multiple insert commit</h4>
+<p>
+INSERT INTO dept1 VALUES (50,'HR','DELHI');
+INSERT INTO dept1 VALUES (60,'IT','MUMBAI');
+COMMIT;
+</p>
+<img src="images/t22.png" alt="Query output" width="200">
+
+<h4>23. Update dept and commit</h4>
+<p>
+UPDATE dept1 SET loc = 'PUNE' WHERE deptno = 10;
+COMMIT;
+</p>
+<img src="images/t23.png" alt="Query output" width="200">
+
+<h4>24. Insert then rollback</h4>
+<p>
+INSERT INTO emp2 VALUES (8888,'B','CLERK',NULL,SYSDATE,1200,NULL,20);
+ROLLBACK;
+</p>
+<img src="images/t24.png" alt="Query output" width="200">
+
+<h4>25. Update then rollback</h4>
+<p>
+UPDATE emp2 SET sal = sal + 500;
+ROLLBACK;
+</p>
+<img src="images/t25.png" alt="Query output" width="200">
+
+<h4>26. Delete then rollback</h4>
+<p>
+DELETE FROM emp2;
+ROLLBACK;
+</p>
+<img src="images/t26.png" alt="Query output" width="200">
+
+<h4>27. Multiple operations rollback</h4>
+<p>
+INSERT INTO emp2 VALUES (7777,'C','CLERK',NULL,SYSDATE,1500,NULL,30);
+UPDATE emp2 SET sal = sal + 200;
+DELETE FROM emp2 WHERE deptno = 30;
+ROLLBACK;
+</p>
+<img src="images/t27.png" alt="Query output" width="200">
+
+<h4>28. Update dept rollback</h4>
+<p>
+UPDATE dept1 SET loc = 'CHENNAI' WHERE deptno = 20;
+ROLLBACK;
+</p>
+<img src="images/t28.png" alt="Query output" width="200">
+
+<h4>29. Insert + update + commit</h4>
+<p>
+INSERT INTO emp2 VALUES (6666,'D','CLERK',NULL,SYSDATE,1400,NULL,10);
+UPDATE emp2 SET sal = sal + 100 WHERE empno = 6666;
+COMMIT;
+</p>
+<img src="images/t29.png" alt="Query output" width="200">
+
+<h4>30. Savepoint + rollback + commit</h4>
+<p>
+INSERT INTO EMP2 VALUES (5555,'E','CLERK',NULL,SYSDATE,1300,NULL,20);
+SAVEPOINT sp1;
+INSERT INTO emp2 VALUES (5556,'F','CLERK',NULL,SYSDATE,1300,NULL,20);
+ROLLBACK TO sp1;
+COMMIT;
+</p>
+<img src="images/t30.png" alt="Query output" width="200">
+
+<h4>31. Partial transaction</h4>
+<p>
+INSERT INTO emp2 VALUES (4444,'G','CLERK',NULL,SYSDATE,1100,NULL,10);
+COMMIT;
+INSERT INTO emp2 VALUES (4445,'H','CLERK',NULL,SYSDATE,1100,NULL,10);
+ROLLBACK;
+</p>
+<img src="images/t31.png" alt="Query output" width="200">
+
+<h4>32. Savepoint demo</h4>
+<p>
+SAVEPOINT sp_start;
+INSERT INTO emp2 VALUES (3333,'I','CLERK',NULL,SYSDATE,1200,NULL,20);
+SAVEPOINT sp_mid;
+UPDATE emp2 SET sal = sal + 100 WHERE empno = 3333;
+</p>
+<img src="images/t32.png" alt="Query output" width="200">
+
+<h4>33. Rollback to savepoint</h4>
+<p>
+ROLLBACK TO sp_mid;
+</p>
+<img src="images/t33.png" alt="Query output" width="200">
+
+<h4>34. Grant + DML + commit</h4>
+<p>
+GRANT SELECT ON emp2 TO system;
+INSERT INTO emp2 VALUES (2222,'J','CLERK',NULL,SYSDATE,1000,NULL,10);
+COMMIT;
+</p>
+<img src="images/t34.png" alt="Query output" width="200">
+
+<h4>35. Revoke and test</h4>
+<p>
+REVOKE SELECT ON emp2 FROM system;
+system cannot SELECT now;
+</p>
+<img src="images/t35.png" alt="Query output" width="200">
+
+<h1>---SCALAR FUNCTION: DATE, NUMERIC, STRING, CONVERSION, GENERAL & NULL (1-60)---</h1>
+
+<h4>1. Display employee name, hire date, and current date. Also calculate the number of days the employee has worked.</h4>
+<p>
+SELECT ename, hiredate, SYSDATE AS current_date,
+       (SYSDATE - hiredate) AS days_worked
+FROM scott.emp;
+</p>
+<img src="images/f1.png" alt = "Query output" width = "200">
+
+<h4>2. Display employee name and hire date in the format: Monday, January 01, 2024.</h4>
+<p>
+SELECT ename,
+       TO_CHAR(hiredate, 'FMDay, FMMonth DD, YYYY') AS hire_date
+FROM scott.emp;
+</p>
+<img src="images/f2.png" alt = "Query output" width = "200">
+
+<h4>3. Find employees who joined in the same month as the current system date (ignore year).</h4>
+<p>
+SELECT ename, hiredate
+FROM scott.emp
+WHERE EXTRACT(MONTH FROM hiredate) = EXTRACT(MONTH FROM SYSDATE);
+</p>
+<img src="images/f3.png" alt = "Query output" width = "200">
+
+<h4>4. Display employee name and the next Monday after their hire date.</h4>
+<p>
+SELECT ename,
+       NEXT_DAY(hiredate, 'MONDAY') AS next_monday
+FROM scott.emp;
+</p>
+<img src="images/f4.png" alt = "Query output" width = "200">
+
+<h4>5. Display employee name and the last day of their joining month.</h4>
+<p>
+SELECT ename, hiredate
+FROM scott.emp
+WHERE ADD_MONTHS(hiredate, 120) < SYSDATE;
+</p>
+<img src="images/f5.png" alt = "Query output" width = "200">
+
+<h4>6. Find employees who have completed more than 10 years in the company.</h4>
+<p>
+SELECT ename, hiredate
+FROM scott.emp
+WHERE ADD_MONTHS(hiredate, 120) < SYSDATE;
+</p>
+<img src="images/f6.png" alt = "Query output" width = "200">
+
+<h4>7. Display employee name and number of months worked in the company.</h4>
+<p>
+SELECT ename,
+       TRUNC(MONTHS_BETWEEN(SYSDATE, hiredate)) AS months_worked
+FROM scott.emp;
+</p>
+<img src="images/f7.png" alt = "Query output" width = "200">
+
+<h4>8. Display employee name, hire date, and hire date after adding 3 years and 6 months.</h4>
+<p>
+SELECT ename, hiredate,
+       ADD_MONTHS(hiredate, 42) AS new_hire_date
+FROM scott.emp;
+</p>
+<img src="images/f8.png" alt = "Query output" width = "200">
+<h4>9. Find employees hired between two given dates (use TO_DATE).</h4>
+<p>
+SELECT ename, hiredate
+FROM scott.emp
+WHERE hiredate BETWEEN 
+      TO_DATE('01-JAN-1981','DD-MON-YYYY') 
+  AND TO_DATE('31-DEC-1982','DD-MON-YYYY');
+</p>
+<img src="images/f9.png" alt = "Query output" width = "200">
+<h4>10. Display the difference in years between SYSDATE and hire date (rounded).</h4>
+<p>
+SELECT ename,
+       ROUND(MONTHS_BETWEEN(SYSDATE, hiredate) / 12) AS years
+FROM scott.emp;
+</p>
+<img src="images/f10.png" alt = "Query output" width = "200">
+
+<h4>11. Display employee name and salary rounded to the nearest 1000.</h4>
+<p>
+SELECT ename, ROUND(sal, -3) FROM scott.emp;
+</p>
+<img src="images/f11.png" alt = "Query output" width = "200">
+<h4>12. Display salary truncated to 2 decimal places.</h4>
+<p>
+SELECT TRUNC(sal, 2) FROM scott.emp;
+</p>
+<img src="images/f12.png" alt = "Query output" width = "200">
+<h4>13. Display employee name and square root of salary.</h4>
+<p>
+SELECT ename, SQRT(sal) FROM scott.emp;
+</p>
+<img src="images/f13.png" alt = "Query output" width = "200">
+<h4>14. Find the absolute difference between salary and 5000.</h4>
+<p>
+SELECT ename, ABS(sal - 5000) FROM scott.emp;
+</p>
+<img src="images/f14.png" alt = "Query output" width = "200">
+<h4>15. Display salary rounded up to the nearest integer.</h4>
+<p>
+SELECT CEIL(sal) FROM scott.emp;
+</p>
+<img src="images/f15.png" alt = "Query output" width = "200">
+<h4>16. Display salary rounded down to the nearest integer.</h4>
+<p>
+SELECT FLOOR(sal) FROM scott.emp;
+</p>
+<img src="images/f16.png" alt = "Query output" width = "200">
+<h4>17. Generate a random number between 1 and 500 for each employee.</h4>
+<p>
+SELECT ename, DBMS_RANDOM.VALUE(1,500) FROM scott.emp;
+</p>
+<img src="images/f17.png" alt = "Query output" width = "200">
+<h4>18. Display remainder when salary is divided by 2000.</h4>
+<p>
+SELECT ename, MOD(sal,2000) FROM scott.emp;
+</p>
+<img src="images/f18.png" alt = "Query output" width = "200">
+<h4>19. Display salary raised to the power of 3.</h4>
+<p>
+SELECT POWER(sal,3) FROM scott.emp;
+</p>
+<img src="images/f19.png" alt = "Query output" width = "200">
+<h4>20. Round salary to nearest hundred and thousand (two columns).</h4>
+<p>
+SELECT ename, ROUND(sal,-2), ROUND(sal,-3) FROM scott.emp;
+</p>
+<img src="images/f20.png" alt = "Query output" width = "200">
+<h4>21. Display employee names in uppercase and lowercase in two columns.</h4>
+<p>
+SELECT UPPER(ename), LOWER(ename) FROM scott.emp;
+</p>
+<img src="images/f21.png" alt = "Query output" width = "200">
+<h4>22. Display employee name and its length.</h4>
+<p>
+SELECT ename, LENGTH(ename) FROM scott.emp;
+</p>
+<img src="images/f22.png" alt = "Query output" width = "200">
+<h4>23. Display first 4 characters of employee name.</h4>
+<p>
+SELECT SUBSTR(ename,1,4) FROM scott.emp;
+</p>
+<img src="images/f23.png" alt = "Query output" width = "200">
+<h4>24. Concatenate employee name and job using - symbol.</h4>
+<p>
+SELECT ename || '-' || job FROM scott.emp;
+</p>
+<img src="images/f24.png" alt = "Query output" width = "200">
+<h4>25. Replace all occurrences of letter ‘A’ with ‘#’ in employee names.</h4>
+<p>
+SELECT REPLACE(ename,'A','#') FROM scott.emp;
+</p>
+<img src="images/f25.png" alt = "Query output" width = "200">
+<h4>26. Display position of first occurrence of ‘E’ in employee name.</h4>
+<p>
+SELECT INSTR(ename,'E') FROM scott.emp;
+</p>
+<img src="images/f26.png" alt = "Query output" width = "200">
+<h4>27. Remove leading and trailing spaces from employee name.</h4>
+<p>
+SELECT TRIM(ename) FROM scott.emp;
+</p>
+<img src="images/f27.png" alt = "Query output" width = "200">
+<h4>28. Display employee name with first letter capital and rest lowercase.</h4>
+<p>
+SELECT INITCAP(ename) FROM scott.emp;
+</p>
+<img src="images/f28.png" alt = "Query output" width = "200">
+<h4>29. Display last 3 characters of employee name.</h4>
+<p>
+SELECT SUBSTR(ename,-3) FROM scott.emp;
+</p>
+<img src="images/f29.png" alt = "Query output" width = "200">
+<h4>30. Pad employee name with * on the left to make total length 10.</h4>
+<p>
+SELECT LPAD(ename,10,'*') FROM scott.emp;
+</p>
+<img src="images/f30.png" alt = "Query output" width = "200">
+<h4>31. Display employee name with spaces removed.</h4>
+<p>
+SELECT REPLACE(ename,' ','') FROM scott.emp;
+</p>
+<img src="images/f31.png" alt = "Query output" width = "200">
+<h4>32. Display employee names starting with ‘S’.</h4>
+<p>
+SELECT ename FROM scott.emp WHERE ename LIKE 'S%';
+</p>
+<img src="images/f32.png" alt = "Query output" width = "200">
+<h4>33. Count number of characters excluding spaces.</h4>
+<p>
+SELECT ename, LENGTH(REPLACE(ename,' ','')) FROM scott.emp;
+</p>
+<img src="images/f33.png" alt = "Query output" width = "200">
+<h4>34. Display employee name reversed.</h4>
+<p>
+SELECT REVERSE(ename) FROM scott.emp;
+</p>
+<img src="images/f34.png" alt = "Query output" width = "200">
+<h4>35. Extract domain name from email column.</h4>
+<p>
+SELECT ename,
+       SUBSTR(email, INSTR(email, '@') + 1) AS domain
+FROM scott.emp;
+</p>
+<img src="images/f35.png" alt = "Query output" width = "200">
+<h4>36. Convert current date into format: DD/MM/YYYY.</h4>
+<p>
+SELECT TO_CHAR(SYSDATE,'DD/MM/YYYY') FROM dual;
+</p>
+<img src="images/f36.png" alt = "Query output" width = "200">
+<h4>37. Convert string '15-AUG-2020' into DATE format.</h4>
+<p>
+SELECT TO_DATE('15-AUG-2020','DD-MON-YYYY') FROM dual;
+</p>
+<img src="images/f37.png" alt = "Query output" width = "200">
+<h4>38. Convert salary into character with currency format (₹10,000).</h4>
+<p>
+SELECT TO_CHAR(sal,'L99,999') FROM scott.emp;
+</p>
+<img src="images/f38.png" alt = "Query output" width = "200">
+<h4>39. Convert number 12345 into string with commas.</h4>
+<p>
+SELECT TO_CHAR(12345,'99,999') FROM dual;
+</p>
+<img src="images/f39.png" alt = "Query output" width = "200">
+<h4>40. Convert hire date into format: Month DD, YYYY.</h4>
+<p>
+SELECT TO_CHAR(hiredate,'Month DD, YYYY') FROM scott.emp;
+</p>
+<img src="images/f40.png" alt = "Query output" width = "200">
+<h4>41. Convert string column to number and perform arithmetic operation.</h4>
+<p>
+SELECT TO_NUMBER(sal) + 100 FROM scott.emp;
+</p>
+<img src="images/f41.png" alt = "Query output" width = "200">
+<h4>42. Handle invalid date format using TO_DATE safely.</h4>
+<p>
+SELECT CASE 
+       WHEN REGEXP_LIKE('31-02-2020','^\d{2}-[A-Z]{3}-\d{4}$')
+       THEN TO_DATE('31-02-2020','DD-MON-YYYY')
+       ELSE NULL
+       END AS safe_date
+FROM dual;
+</p>
+<img src="images/f42.png" alt = "Query output" width = "200">
+<h4>43. Convert SYSDATE into year only.</h4>
+<p>
+SELECT TO_CHAR(SYSDATE,'YYYY') FROM dual;
+</p>
+<img src="images/f43.png" alt = "Query output" width = "200">
+<h4>44. Convert salary into string and concatenate with text.</h4>
+<p>
+SELECT 'Salary: ' || TO_CHAR(sal) FROM scott.emp;
+</p>
+<img src="images/f44.png" alt = "Query output" width = "200">
+<h4>45. Display hire date in multiple formats (3 columns).</h4>
+<p>
+SELECT ename,
+       TO_CHAR(hiredate, 'DD-MM-YYYY') AS format1,
+       TO_CHAR(hiredate, 'Month DD, YYYY') AS format2,
+       TO_CHAR(hiredate, 'YYYY') AS format3
+FROM scott.emp;
+</p>
+<img src="images/f45.png" alt = "Query output" width = "200">
+<h4>46. Display employee name and salary. If salary is NULL, display 0.</h4>
+<p>
+SELECT ename, NVL(sal,0) FROM scott.emp;
+</p>
+<img src="images/f46.png" alt = "Query output" width = "200">
+<h4>47. Display employee name and commission. If NULL, display ‘No Commission’.</h4>
+<p>
+SELECT ename, NVL(TO_CHAR(comm),'No Commission') FROM scott.emp;
+</p>
+<img src="images/f47.png" alt = "Query output" width = "200">
+<h4>48. Use NVL2 to show commission status (Has/No Commission).</h4>
+<p>
+SELECT ename, NVL2(comm,'Has Commission','No Commission') FROM scott.emp;
+</p>
+<img src="images/f48.png" alt = "Query output" width = "200">
+<h4>49. Use COALESCE to display first non-null value among salary, commission, bonus.</h4>
+<p>
+SELECT ename, COALESCE(sal,comm,0) FROM scott.emp;
+</p>
+<img src="images/f49.png" alt = "Query output" width = "200">
+<h4>50. Display employee salary; if NULL replace with average salary.</h4>
+<p>
+SELECT ename, NVL(sal,(SELECT AVG(sal) FROM scott.emp)) FROM scott.emp;
+</p>
+<img src="images/f50.png" alt = "Query output" width = "200">
+<h4>51. Use NULLIF to compare salary and commission.</h4>
+<p>
+SELECT ename, NULLIF(sal,comm) FROM scott.emp;
+</p>
+<img src="images/f51.png" alt = "Query output" width = "200">
+<h4>52. Replace NULL department name with ‘No Department’.</h4>
+<p>
+SELECT NVL(dname,'No Department') FROM scott.dept;
+</p>
+<img src="images/f52.png" alt = "Query output" width = "200">
+<h4>53. Display employees whose commission is NULL.</h4>
+<p>
+SELECT ename FROM scott.emp WHERE comm IS NULL;
+</p>
+<img src="images/f53.png" alt = "Query output" width = "200">
+<h4>54. Use DECODE to categorize salary (Low/Medium/High).</h4>
+<p>
+SELECT ename,
+DECODE( TRUE, sal<2000,'Low', sal <5000,'Medium', 'High')
+FROM scott.emp;
+</p>
+<img src="images/f54.png" alt = "Query output" width = "200">
+<h4>55. Use CASE to categorize employees based on experience.</h4>
+<p>
+SELECT ename,
+CASE
+WHEN MONTHS_BETWEEN(SYSDATE,hiredate)/12 < 5 THEN 'Junior'
+WHEN MONTHS_BETWEEN(SYSDATE,hiredate)/12 < 10 THEN 'Mid'
+ELSE 'Senior'
+END
+FROM scott.emp;
+</p>
+<img src="images/f55.png" alt = "Query output" width = "200">
+<h4>56. Display job; if NULL show ‘Unknown Job’.</h4>
+<p>
+SELECT ename, NVL(job,'Unknown Job') FROM scott.emp;
+</p>
+<img src="images/f56.png" alt = "Query output" width = "200">
+<h4>57. Use NVL with date columns.</h4>
+<p>
+SELECT ename, NVL(hiredate,SYSDATE) FROM scott.emp;
+</p>
+<img src="images/f57.png" alt = "Query output" width = "200">
+<h4>58. Display employee name and bonus; if NULL calculate 10% of salary.</h4>
+<p>
+SELECT ename, NVL(comm, sal*0.10) FROM scott.emp;
+</p>
+<img src="images/f58.png" alt = "Query output" width = "200">
+<h4>59. Use COALESCE with multiple NULL columns.</h4>
+<p>
+SELECT ename, COALESCE(comm, sal, 0) FROM scott.emp;
+</p>
+<img src="images/f59.png" alt = "Query output" width = "200">
+<h4>60. Combine NVL and TO_CHAR for formatted output.</h4>
+<p>
+SELECT ename, NVL(TO_CHAR(comm),'No Comm') FROM scott.emp;
+</p>
+<img src="images/f60.png" alt = "Query output" width = "200">
+
+</div>
+</body>
+</html>
